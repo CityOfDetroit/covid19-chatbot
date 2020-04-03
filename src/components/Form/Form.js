@@ -97,7 +97,11 @@ function Form(props) {
                         break;
                     
                     case 'text':
-                        markup = <input type={item.type} id={item.id} name={item.name} value={item.value} disabled={item.disabled} placeholder={item.placeholder}></input>;
+                        markup = <input type={item.type} id={item.id} name={item.name} disabled={item.disabled} placeholder={item.placeholder}></input>;
+                        break;
+
+                    case 'number':
+                        markup = <input type={item.type} id={item.id} name={item.name} disabled={item.disabled} placeholder={item.placeholder}></input>;
                         break;
                 
                     default:
@@ -117,16 +121,31 @@ function Form(props) {
         let tempFormData;
         switch (step) {
             case 0:
-                setStep(1);
+                switch (btnState) {
+                    case "Self check":
+                        setStep(1);
+                        break;
+
+                    case "COVID-19 FAQs":
+                        setBuildType('faq');
+                        setStep(0);
+                    break;
+
+                    case "Resources":
+                        setBuildType('resources');
+                        setStep(0);
+                
+                    default:
+                        break;
+                }
                 break;
 
             case 1:
-                setFormData({
-                    q1: {
-                        values: [btnState]
-                    }
-                });
-                setStep(2);
+                if(btnState == 'Detroit'){
+                    setStep(3);
+                }else{
+                    setStep(2);
+                }
                 break;
 
             case 2:
@@ -139,16 +158,21 @@ function Form(props) {
                 break;
 
             case 3:
-                let tempAgents = [];
-                for (let index = 0; index < agents; index++) {
-                    tempAgents.push(e.target.elements[`agent-${index}`].value);
+                // let tempAgents = [];
+                // for (let index = 0; index < agents; index++) {
+                //     tempAgents.push(e.target.elements[`agent-${index}`].value);
+                // }
+                // tempFormData = formData;
+                // tempFormData.q3 = {
+                //     values: [tempAgents]
+                // }
+                // setFormData(tempFormData);
+                // setStep(4);
+                if(btnState == 'Yes'){
+                    setStep(5);
+                }else{
+                    setStep(4);
                 }
-                tempFormData = formData;
-                tempFormData.q3 = {
-                    values: [tempAgents]
-                }
-                setFormData(tempFormData);
-                setStep(4);
                 break;
 
             case 4:

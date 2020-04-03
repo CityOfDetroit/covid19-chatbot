@@ -22,26 +22,26 @@ function App() {
 
     const closeChat = (e) => {
         e.preventDefault();
+        setBuildType('application');
         setStep(0);
     }
 
-    const buildHeader = () => {
-        if(step > 0){
-            return (
-            <div className="header">
-                <p><img src="https://detroitmi.gov/themes/custom/detroitmi/logo-white.png" alt="City of Detroit"></img> <span>Coronavirus Self-Checker</span></p>
+    const buildHeader = (items) => {
+        const markup = items.header.map((header) =>
+            <div key={header.id} className="header">
+                <p><img src={header.logoURL} alt={header.logoAlt}></img> <span>{header.text}</span></p>
                 <form onSubmit={closeChat}>
                     <button>x</button>
                 </form>
             </div>
-            )
-        }
+        );
+        return markup;
     }
 
     const buildChat = () => {
         const markup = 
         <article className="chat">
-            {buildHeader()}
+            {buildHeader(data[buildType][step].items)}
             {buildCards(data[buildType][step].items)}
         </article>
         return markup;

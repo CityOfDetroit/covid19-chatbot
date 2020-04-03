@@ -5,11 +5,22 @@ form.single-button{
         padding: 0;
         margin: 0;
 
-        button{
-            background-color: $color-1;
-            color: $white;
-            padding: .5em;
-            border: none;
+        div{
+            float: left;
+
+            button{
+                background-color: $color-1;
+                color: $white;
+                padding: .5em;
+                border: none;
+                cursor: pointer;
+                margin-right: 1em;
+            }
+
+            button:hover{
+                background-color: $color-2;
+                color: $color-1;
+            }
         }
     }
 }

@@ -11,7 +11,7 @@
         padding: 1em;
 
         .chat{
-            border: .1em solid $color-1;
+            margin-bottom: .5em;
 
             .header{
                 background-color: $color-1;
@@ -23,6 +23,7 @@
                     margin: 0;
                     display: flex;
                     align-items: center;
+                    flex: 1;
 
                     img{
                         width: 3em;
@@ -34,14 +35,21 @@
                 }
 
                 form{
-                    display: flex;
                     margin-left: 1em;
 
                     button{
-                        margin: auto;
+                        top: -.05em;
+                        position: relative;
                         font-size: 3em;
                         color: $white;
                         font-weight: bold;
+                        background-color: $color-1;
+                        border: none;
+                        cursor: pointer;
+                    }
+
+                    button:hover{
+                        color: $color-2;
                     }
                 }
             }

@@ -2,6 +2,7 @@
     "application": [
         {
             "items" : {
+                "header": [],
                 "cards": [],
                 "forms": [
                     {
@@ -25,6 +26,24 @@
                                         "description"   : "Button to start application.",
                                         "text"  : "Self check",
                                         "label" : false
+                                    },
+                                    {   
+                                        "id"    : "step-0-form-0-section-0-item-1",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "covid19-faqs",
+                                        "description"   : "Button to get FAQs.",
+                                        "text"  : "COVID-19 FAQs",
+                                        "label" : false
+                                    },
+                                    {   
+                                        "id"    : "step-0-form-0-section-0-item-2",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "resurces",
+                                        "description"   : "Button to get resources.",
+                                        "text"  : "Resources",
+                                        "label" : false
                                     }
                                 ]
                             }
@@ -35,6 +54,16 @@
         },
         {
             "items" : {
+                "header": [
+                    {
+                        "id": "self-checker",
+                        "text": "COVID-19 Self-Cheker",
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
                 "cards": [
                     {   
                         "id"        : "step-1-card-0",
@@ -49,7 +78,7 @@
                                 {
                                     "id"        : "card-0-body-0",
                                     "tag"       : "p",
-                                    "content"   : "Hi, I’m Beth. I’m here to guide you through the Coronavirus Self-Checker." 
+                                    "content"   : "Hi, I’m Beth. I’m here to guide you through the COVID-19 Self-Cheker." 
                                 },
                                 {
                                     "id"        : "card-0-body-1",
@@ -82,7 +111,7 @@
                                 {
                                     "id"        : "card-1-body-0",
                                     "tag"       : "p",
-                                    "content"   : "During the assessment, you can refresh the page if you need to start again" 
+                                    "content"   : "During the assessment, you can refresh the page if you need to start again or close the chat window." 
                                 },
                                 {
                                     "id"        : "card-1-body-1",
@@ -152,13 +181,23 @@
         },
         {
             "items" : {
+                "header": [
+                    {
+                        "id": "self-checker",
+                        "text": "COVID-19 Self-Cheker",
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
                 "cards": [
                     {   
                         "id"        : "step-2-card-0",
-                        "type"      : "right pop-up color-3",
+                        "type"      : "right pop-up color-2",
                         "title"     : {
                             "type"  : "small",
-                            "value" : "Helpful hints and tips"
+                            "value" : null
                         },
                         "body"   : {
                             "type"      : "text",
@@ -166,66 +205,39 @@
                                 {
                                     "id"        : "card-0-body-0",
                                     "tag"       : "p",
-                                    "content"   : "Need definition of affiliated company." 
+                                    "content"   : "COVID-19 Self-Cheker is intended for people currently located in the City of Detroit" 
+                                },
+                                {
+                                    "id"        : "card-0-body-1",
+                                    "tag"       : "p",
+                                    "content"   : "Please check the Center for Disease Control and Prevention for more information about COVID-19 in your location." 
                                 }
                             ]
                         }
                     }
                 ],
-                "forms": [
-                    {
-                        "id"            : "step-2-form-0",
-                        "type"          : "single-button",
-                        "position"      : "center",
-                        "requirements"  : [],
-                        "text"          : {
-                            "type"      : "text",
-                            "markup"    : [
-                                {
-                                    "id"        : "card-0-body-0",
-                                    "tag"       : "legend",
-                                    "content"   : "Do you or any affiliated company currently own property in Detroit?"
-                                }
-                            ]
-                        },
-                        "sections"      : [
-                            {
-                                "id"    : "step-1-form-0-section-0",
-                                "items" : [
-                                    {   
-                                        "id"    : "step-1-form-0-section-0-item-0",
-                                        "tag"   : "button",
-                                        "type"  : "submit",
-                                        "name"  : "own-property",
-                                        "description"   : "Own property in Detroit",
-                                        "text"  : "Yes",
-                                        "label" : false
-                                    },
-                                    {   
-                                        "id"    : "step-1-form-0-section-0-item-1",
-                                        "tag"   : "button",
-                                        "type"  : "submit",
-                                        "name"  : "not-own-property",
-                                        "description"   : "Don't own property in Detroit",
-                                        "text"  : "No",
-                                        "label" : false
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
+                "forms": []
             }
         },
         {
             "items" : {
+                "header": [
+                    {
+                        "id": "self-checker",
+                        "text": "COVID-19 Self-Cheker",
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
                 "cards": [
                     {   
                         "id"        : "step-3-card-0",
-                        "type"      : "right pop-up color-3",
+                        "type"      : "right pop-up color-2",
                         "title"     : {
                             "type"  : "small",
-                            "value" : "Helpful hints and tips"
+                            "value" : null
                         },
                         "body"   : {
                             "type"      : "text",
@@ -233,12 +245,7 @@
                                 {
                                     "id"        : "card-0-body-0",
                                     "tag"       : "p",
-                                    "content"   : "A Registered Agent is a business or individual designated to receive service of process when a business entity is party to a legal action." 
-                                },
-                                {
-                                    "id"        : "card-0-body-1",
-                                    "tag"       : "p",
-                                    "content"   : "A registered agent for a business entity may be an officer or employee of the company, or a third party, such as the organization’s lawyer or service company." 
+                                    "content"   : "Are you ill, or caring for someone who is ill?" 
                                 }
                             ]
                         }
@@ -247,18 +254,12 @@
                 "forms": [
                     {
                         "id"            : "step-3-form-0",
-                        "type"          : "multi-input",
+                        "type"          : "single-button",
                         "position"      : "left",
                         "requirements"  : [],
                         "text"          : {
                             "type"      : "text",
-                            "markup"    : [
-                                {
-                                    "id"        : "card-0-body-0",
-                                    "tag"       : "legend",
-                                    "content"   : "Who are your registered agents?"
-                                }
-                            ]
+                            "markup"    : []
                         },
                         "sections"      : [
                             {
@@ -267,86 +268,18 @@
                                     {   
                                         "id"    : "step-3-form-0-section-0-item-1",
                                         "tag"   : "button",
-                                        "type"  : "add",
-                                        "name"  : "add-agent",
-                                        "description"   : "Add Registered agent",
-                                        "text"  : "Add",
-                                        "label" : false
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "items" : {
-                "cards": [
-                    {   
-                        "id"        : "step-4-card-0",
-                        "type"      : "right pop-up color-3",
-                        "title"     : {
-                            "type"  : "small",
-                            "value" : "Helpful hints and tips"
-                        },
-                        "body"   : {
-                            "type"      : "text",
-                            "markup"    : [
-                                {
-                                    "id"        : "card-0-body-0",
-                                    "tag"       : "p",
-                                    "content"   : "100% of our successful applicants have their property taxes in the City of Detroit up-to-date. " 
-                                },
-                                {
-                                    "id"        : "card-0-body-1",
-                                    "tag"       : "p",
-                                    "content"   : "Any applicants that have outstanding taxes will receive a denial on their property application." 
-                                },
-                                {
-                                    "id"        : "card-0-body-2",
-                                    "tag"       : "p",
-                                    "content"   : "Here is a link to pay your taxes: linkhere" 
-                                }
-                            ]
-                        }
-                    }
-                ],
-                "forms": [
-                    {
-                        "id"            : "step-4-form-0",
-                        "type"          : "single-button",
-                        "position"      : "center",
-                        "requirements"  : [],
-                        "text"          : {
-                            "type"      : "text",
-                            "markup"    : [
-                                {
-                                    "id"        : "card-0-body-0",
-                                    "tag"       : "legend",
-                                    "content"   : "Are you delinquent on any property taxes or blight tickets in the City of Detroit?"
-                                }
-                            ]
-                        },
-                        "sections"      : [
-                            {
-                                "id"    : "step-4-form-0-section-0",
-                                "items" : [
-                                    {   
-                                        "id"    : "step-4-form-0-section-0-item-0",
-                                        "tag"   : "button",
                                         "type"  : "submit",
-                                        "name"  : "delinquent",
-                                        "description"   : "Delinquent on any property taxes or blight tickets",
+                                        "name"  : "ill",
+                                        "description"   : "They are ill",
                                         "text"  : "Yes",
                                         "label" : false
                                     },
                                     {   
-                                        "id"    : "step-4-form-0-section-0-item-1",
+                                        "id"    : "step-3-form-0-section-0-item-2",
                                         "tag"   : "button",
                                         "type"  : "submit",
-                                        "name"  : "not-delinquent",
-                                        "description"   : "Not delinquent on any property taxes or blight tickets",
+                                        "name"  : "not-ill",
+                                        "description"   : "They aren't ill",
                                         "text"  : "No",
                                         "label" : false
                                     }
@@ -359,13 +292,23 @@
         },
         {
             "items" : {
+                "header": [
+                    {
+                        "id": "self-checker",
+                        "text": "COVID-19 Self-Cheker",
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
                 "cards": [
                     {   
-                        "id"        : "step-5-card-0",
-                        "type"      : "right pop-up color-3",
+                        "id"        : "step-4-card-0",
+                        "type"      : "right pop-up color-2",
                         "title"     : {
                             "type"  : "small",
-                            "value" : "Helpful hints and tips"
+                            "value" : null
                         },
                         "body"   : {
                             "type"      : "text",
@@ -373,17 +316,52 @@
                                 {
                                     "id"        : "card-0-body-0",
                                     "tag"       : "p",
-                                    "content"   : "100% of our successful applicants have their property taxes in the City of Detroit up-to-date. " 
+                                    "content"   : "Sounds like you are feeling ok." 
                                 },
                                 {
                                     "id"        : "card-0-body-1",
                                     "tag"       : "p",
-                                    "content"   : "Any applicants that have outstanding taxes will receive a denial on their property application." 
+                                    "content"   : "Please visit the City of Detroit website for more the most recent updates." 
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": []
+            }
+        },
+        {
+            "items" : {
+                "header": [
+                    {
+                        "id": "self-checker",
+                        "text": "COVID-19 Self-Cheker",
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
+                "cards": [
+                    {   
+                        "id"        : "step-5-card-0",
+                        "type"      : "right pop-up color-2",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "What is your age? Please enter the number of years." 
                                 },
                                 {
-                                    "id"        : "card-0-body-2",
+                                    "id"        : "card-0-body-1",
                                     "tag"       : "p",
-                                    "content"   : "Here is a link to pay your taxes: linkhere" 
+                                    "content"   : "If you are filling this for a person under 1 year old. Just enter 0." 
                                 }
                             ]
                         }
@@ -397,26 +375,33 @@
                         "requirements"  : [],
                         "text"          : {
                             "type"      : "text",
-                            "markup"    : [
-                                {
-                                    "id"        : "card-0-body-0",
-                                    "tag"       : "legend",
-                                    "content"   : "Please check the status of your blight tickets here, pay your property taxes here and return to the application once you have completed payment."
-                                }
-                            ]
+                            "markup"    : []
                         },
                         "sections"      : [
                             {
                                 "id"    : "step-5-form-0-section-0",
                                 "items" : [
                                     {   
-                                        "id"    : "step-5-form-0-section-0-item-0",
-                                        "tag"   : "button",
-                                        "type"  : "submit",
-                                        "name"  : "close",
-                                        "description"   : "Close Application",
-                                        "text"  : "End Application",
-                                        "label" : false
+                                        "id"            : "age",
+                                        "tag"           : "input",
+                                        "type"          : "number",
+                                        "disabled"      : false,
+                                        "value"         : "",
+                                        "placeholder"   : "Please enter number of years.",
+                                        "name"          : "age",
+                                        "description"   : "Age of user",
+                                        "text"          : "",
+                                        "label"         : false,
+                                        "labelText"     : ""
+                                    },
+                                    {   
+                                        "id"            : "step-5-form-0-section-0-item-0",
+                                        "tag"           : "button",
+                                        "type"          : "submit",
+                                        "name"          : "submit",
+                                        "description"   : "Submit age",
+                                        "text"          : "Send",
+                                        "label"         : false
                                     }
                                 ]
                             }
@@ -427,6 +412,16 @@
         },
         {
             "items" : {
+                "header": [
+                    {
+                        "id": "self-checker",
+                        "text": "COVID-19 Self-Cheker",
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
                 "cards": [],
                 "forms": [
                     {
@@ -475,6 +470,16 @@
         },
         {
             "items" : {
+                "header": [
+                    {
+                        "id": "self-checker",
+                        "text": "COVID-19 Self-Cheker",
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
                 "cards": [
                     {   
                         "id"        : "step-7-card-0",
@@ -539,6 +544,16 @@
         },
         {
             "items" : {
+                "header": [
+                    {
+                        "id": "self-checker",
+                        "text": "COVID-19 Self-Cheker",
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
                 "cards": [
                     {   
                         "id"        : "step-8-card-0",
@@ -606,6 +621,16 @@
         },
         {
             "items" : {
+                "header": [
+                    {
+                        "id": "self-checker",
+                        "text": "COVID-19 Self-Cheker",
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
                 "cards": [
                     {   
                         "id"        : "step-9-card-0",
@@ -709,6 +734,16 @@
         },
         {
             "items" : {
+                "header": [
+                    {
+                        "id": "self-checker",
+                        "text": "COVID-19 Self-Cheker",
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
                 "cards": [
                     {   
                         "id"        : "step-10-card-0",
@@ -775,28 +810,26 @@
             }
         }
     ],
-    "status" : [
+    "resources" : [
         {
             "items" : {
+                "header": [
+                    {
+                        "id": "resources",
+                        "text": "COVID-19 Resources",
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
                 "cards": [
                     {   
-                        "id"        : "status-0-card-0",
-                        "type"      : "center pop-up color-2",
-                        "title"     : {
-                            "type"  : "Medium",
-                            "value" : "Application Status Form"
-                        },
-                        "body"   : {
-                            "type"      : "text",
-                            "markup"    : []
-                        }
-                    },
-                    {   
-                        "id"        : "status-0-card-1",
-                        "type"      : "right pop-up color-3",
+                        "id"        : "step-0-card-0",
+                        "type"      : "right pop-up color-2",
                         "title"     : {
                             "type"  : "small",
-                            "value" : "Helpful hints and tips"
+                            "value" : null
                         },
                         "body"   : {
                             "type"      : "text",
@@ -804,12 +837,48 @@
                                 {
                                     "id"        : "card-0-body-0",
                                     "tag"       : "p",
-                                    "content"   : "Use the email you provided when creating your application." 
+                                    "content"   : "Hi, I’m Beth. I’m here to guide you through the COVID-19 Resources section." 
+                                }
+                            ]
+                        }
+                    },
+                    {   
+                        "id"        : "step-0-card-1",
+                        "type"      : "right pop-up color-2",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-1-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "During the assessment, you can refresh the page if you need to start again or close the chat window." 
                                 },
                                 {
-                                    "id"        : "card-0-body-1",
+                                    "id"        : "card-1-body-1",
                                     "tag"       : "p",
-                                    "content"   : "An application number was given to you after successfully completing your form." 
+                                    "content"   : "Ready? Let’s get started." 
+                                }
+                            ]
+                        }
+                    },
+                    {   
+                        "id"        : "step-0-card-2",
+                        "type"      : "right pop-up color-2",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-2-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "What resources are you looking for?" 
                                 }
                             ]
                         }
@@ -817,40 +886,157 @@
                 ],
                 "forms": [
                     {
-                        "id"            : "status-0-form-0",
+                        "id"            : "step-0-form-0",
                         "type"          : "single-button",
                         "position"      : "center",
                         "requirements"  : [],
                         "text"          : {
                             "type"      : "text",
-                            "markup"    : [
-                                {
-                                    "id"        : "card-0-body-0",
-                                    "tag"       : "legend",
-                                    "content"   : "Enter required information."
-                                }
-                            ]
+                            "markup"    : []
                         },
                         "sections"      : [
                             {
-                                "id"    : "status-0-form-0-section-0",
+                                "id"    : "step-0-form-0-section-0",
                                 "items" : [
                                     {   
-                                        "id"    : "status-0-form-0-section-0-item-0",
+                                        "id"    : "step-0-form-0-section-0-item-0",
                                         "tag"   : "button",
                                         "type"  : "submit",
-                                        "name"  : "own-property",
-                                        "description"   : "Own property in Detroit",
-                                        "text"  : "Yes",
+                                        "name"  : "food",
+                                        "description"   : "Food resources",
+                                        "text"  : "Food",
                                         "label" : false
                                     },
                                     {   
-                                        "id"    : "status-0-form-0-section-0-item-1",
+                                        "id"    : "step-0-form-0-section-0-item-1",
                                         "tag"   : "button",
                                         "type"  : "submit",
-                                        "name"  : "not-own-property",
-                                        "description"   : "Don't own property in Detroit",
-                                        "text"  : "No",
+                                        "name"  : "water",
+                                        "description"   : "Water service resources",
+                                        "text"  : "Water",
+                                        "label" : false
+                                    },
+                                    {   
+                                        "id"    : "step-0-form-0-section-0-item-2",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "job",
+                                        "description"   : "Employment resources",
+                                        "text"  : "Jobs",
+                                        "label" : false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "faq" : [
+        {
+            "items" : {
+                "header": [
+                    {
+                        "id": "faqs",
+                        "text": "COVID-19 FAQs",
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
+                "cards": [
+                    {   
+                        "id"        : "step-0-card-0",
+                        "type"      : "right pop-up color-2",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "Hi, I’m Beth. I’m here to guide you through the COVID-19 FAQs section." 
+                                }
+                            ]
+                        }
+                    },
+                    {   
+                        "id"        : "step-0-card-1",
+                        "type"      : "right pop-up color-2",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-1-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "During the assessment, you can refresh the page if you need to start again or close the chat window." 
+                                },
+                                {
+                                    "id"        : "card-1-body-1",
+                                    "tag"       : "p",
+                                    "content"   : "Ready? Let’s get started." 
+                                }
+                            ]
+                        }
+                    },
+                    {   
+                        "id"        : "step-0-card-2",
+                        "type"      : "right pop-up color-2",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-2-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "What is your question?" 
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": [
+                    {
+                        "id"            : "step-0-form-0",
+                        "type"          : "single-button",
+                        "position"      : "center",
+                        "requirements"  : [],
+                        "text"          : {
+                            "type"      : "text",
+                            "markup"    : []
+                        },
+                        "sections"      : [
+                            {
+                                "id"    : "step-0-form-0-section-0",
+                                "items" : [
+                                    {   
+                                        "id"    : "step-0-form-0-section-0-item-0",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "what-is-covid19",
+                                        "description"   : "Learn about COVID-19",
+                                        "text"  : "What's COVID-19?",
+                                        "label" : false
+                                    },
+                                    {   
+                                        "id"    : "step-0-form-0-section-0-item-1",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "covid-19-symptoms",
+                                        "description"   : "Learn about Symptoms",
+                                        "text"  : "What are the symptoms?",
                                         "label" : false
                                     }
                                 ]
