@@ -1,0 +1,864 @@
+{
+    "application": [
+        {
+            "items" : {
+                "cards": [],
+                "forms": [
+                    {
+                        "id"            : "step-0-form-0",
+                        "type"          : "single-button",
+                        "position"      : "center",
+                        "requirements"  : [],
+                        "text"          : {
+                            "type"      : null,
+                            "markup"    : []
+                        },
+                        "sections"      : [
+                            {
+                                "id"    : "step-0-form-0-section-0",
+                                "items" : [
+                                    {   
+                                        "id"    : "step-0-form-0-section-0-item-0",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "start-form",
+                                        "description"   : "Button to start application.",
+                                        "text"  : "Self check",
+                                        "label" : false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "items" : {
+                "cards": [
+                    {   
+                        "id"        : "step-1-card-0",
+                        "type"      : "right pop-up color-2",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "Hi, I’m Beth. I’m here to guide you through the Coronavirus Self-Checker." 
+                                },
+                                {
+                                    "id"        : "card-0-body-1",
+                                    "tag"       : "p",
+                                    "content"   : "If you are experiencing a life-threatening emergency, please call 911 immediately." 
+                                },
+                                {
+                                    "id"        : "card-0-body-2",
+                                    "tag"       : "p",
+                                    "content"   : "This system does not replace the judgment of healthcare professionals or the performance of any clinical assessment." 
+                                },
+                                {
+                                    "id"        : "card-0-body-3",
+                                    "tag"       : "p",
+                                    "content"   : "To provide information on the right level of care, we are going to ask you a series of questions." 
+                                }
+                            ]
+                        }
+                    },
+                    {   
+                        "id"        : "step-1-card-1",
+                        "type"      : "right pop-up color-2",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-1-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "During the assessment, you can refresh the page if you need to start again" 
+                                },
+                                {
+                                    "id"        : "card-1-body-1",
+                                    "tag"       : "p",
+                                    "content"   : "Ready? Let’s get started." 
+                                }
+                            ]
+                        }
+                    },
+                    {   
+                        "id"        : "step-1-card-2",
+                        "type"      : "right pop-up color-2",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-2-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "Where are you located?" 
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": [
+                    {
+                        "id"            : "step-1-form-0",
+                        "type"          : "single-button",
+                        "position"      : "center",
+                        "requirements"  : [],
+                        "text"          : {
+                            "type"      : "text",
+                            "markup"    : []
+                        },
+                        "sections"      : [
+                            {
+                                "id"    : "step-1-form-0-section-0",
+                                "items" : [
+                                    {   
+                                        "id"    : "step-1-form-0-section-0-item-0",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "detroit-resident",
+                                        "description"   : "Detroit resident",
+                                        "text"  : "Detroit",
+                                        "label" : false
+                                    },
+                                    {   
+                                        "id"    : "step-1-form-0-section-0-item-1",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "non-detroit-resident",
+                                        "description"   : "Non-Detroit resident",
+                                        "text"  : "Somewhere else",
+                                        "label" : false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "items" : {
+                "cards": [
+                    {   
+                        "id"        : "step-2-card-0",
+                        "type"      : "right pop-up color-3",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : "Helpful hints and tips"
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "Need definition of affiliated company." 
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": [
+                    {
+                        "id"            : "step-2-form-0",
+                        "type"          : "single-button",
+                        "position"      : "center",
+                        "requirements"  : [],
+                        "text"          : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "legend",
+                                    "content"   : "Do you or any affiliated company currently own property in Detroit?"
+                                }
+                            ]
+                        },
+                        "sections"      : [
+                            {
+                                "id"    : "step-1-form-0-section-0",
+                                "items" : [
+                                    {   
+                                        "id"    : "step-1-form-0-section-0-item-0",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "own-property",
+                                        "description"   : "Own property in Detroit",
+                                        "text"  : "Yes",
+                                        "label" : false
+                                    },
+                                    {   
+                                        "id"    : "step-1-form-0-section-0-item-1",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "not-own-property",
+                                        "description"   : "Don't own property in Detroit",
+                                        "text"  : "No",
+                                        "label" : false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "items" : {
+                "cards": [
+                    {   
+                        "id"        : "step-3-card-0",
+                        "type"      : "right pop-up color-3",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : "Helpful hints and tips"
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "A Registered Agent is a business or individual designated to receive service of process when a business entity is party to a legal action." 
+                                },
+                                {
+                                    "id"        : "card-0-body-1",
+                                    "tag"       : "p",
+                                    "content"   : "A registered agent for a business entity may be an officer or employee of the company, or a third party, such as the organization’s lawyer or service company." 
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": [
+                    {
+                        "id"            : "step-3-form-0",
+                        "type"          : "multi-input",
+                        "position"      : "left",
+                        "requirements"  : [],
+                        "text"          : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "legend",
+                                    "content"   : "Who are your registered agents?"
+                                }
+                            ]
+                        },
+                        "sections"      : [
+                            {
+                                "id"    : "step-3-form-0-section-0",
+                                "items" : [
+                                    {   
+                                        "id"    : "step-3-form-0-section-0-item-1",
+                                        "tag"   : "button",
+                                        "type"  : "add",
+                                        "name"  : "add-agent",
+                                        "description"   : "Add Registered agent",
+                                        "text"  : "Add",
+                                        "label" : false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "items" : {
+                "cards": [
+                    {   
+                        "id"        : "step-4-card-0",
+                        "type"      : "right pop-up color-3",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : "Helpful hints and tips"
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "100% of our successful applicants have their property taxes in the City of Detroit up-to-date. " 
+                                },
+                                {
+                                    "id"        : "card-0-body-1",
+                                    "tag"       : "p",
+                                    "content"   : "Any applicants that have outstanding taxes will receive a denial on their property application." 
+                                },
+                                {
+                                    "id"        : "card-0-body-2",
+                                    "tag"       : "p",
+                                    "content"   : "Here is a link to pay your taxes: linkhere" 
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": [
+                    {
+                        "id"            : "step-4-form-0",
+                        "type"          : "single-button",
+                        "position"      : "center",
+                        "requirements"  : [],
+                        "text"          : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "legend",
+                                    "content"   : "Are you delinquent on any property taxes or blight tickets in the City of Detroit?"
+                                }
+                            ]
+                        },
+                        "sections"      : [
+                            {
+                                "id"    : "step-4-form-0-section-0",
+                                "items" : [
+                                    {   
+                                        "id"    : "step-4-form-0-section-0-item-0",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "delinquent",
+                                        "description"   : "Delinquent on any property taxes or blight tickets",
+                                        "text"  : "Yes",
+                                        "label" : false
+                                    },
+                                    {   
+                                        "id"    : "step-4-form-0-section-0-item-1",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "not-delinquent",
+                                        "description"   : "Not delinquent on any property taxes or blight tickets",
+                                        "text"  : "No",
+                                        "label" : false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "items" : {
+                "cards": [
+                    {   
+                        "id"        : "step-5-card-0",
+                        "type"      : "right pop-up color-3",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : "Helpful hints and tips"
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "100% of our successful applicants have their property taxes in the City of Detroit up-to-date. " 
+                                },
+                                {
+                                    "id"        : "card-0-body-1",
+                                    "tag"       : "p",
+                                    "content"   : "Any applicants that have outstanding taxes will receive a denial on their property application." 
+                                },
+                                {
+                                    "id"        : "card-0-body-2",
+                                    "tag"       : "p",
+                                    "content"   : "Here is a link to pay your taxes: linkhere" 
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": [
+                    {
+                        "id"            : "step-5-form-0",
+                        "type"          : "single-button",
+                        "position"      : "center",
+                        "requirements"  : [],
+                        "text"          : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "legend",
+                                    "content"   : "Please check the status of your blight tickets here, pay your property taxes here and return to the application once you have completed payment."
+                                }
+                            ]
+                        },
+                        "sections"      : [
+                            {
+                                "id"    : "step-5-form-0-section-0",
+                                "items" : [
+                                    {   
+                                        "id"    : "step-5-form-0-section-0-item-0",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "close",
+                                        "description"   : "Close Application",
+                                        "text"  : "End Application",
+                                        "label" : false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "items" : {
+                "cards": [],
+                "forms": [
+                    {
+                        "id"            : "step-6-form-0",
+                        "type"          : "single-button",
+                        "position"      : "center",
+                        "requirements"  : [],
+                        "text"          : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "legend",
+                                    "content"   : "Have you found a property?"
+                                }
+                            ]
+                        },
+                        "sections"      : [
+                            {
+                                "id"    : "step-6-form-0-section-0",
+                                "items" : [
+                                    {   
+                                        "id"    : "step-6-form-0-section-0-item-0",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "found-property",
+                                        "description"   : "Found a property",
+                                        "text"  : "Yes",
+                                        "label" : false
+                                    },
+                                    {   
+                                        "id"    : "step-6-form-0-section-0-item-1",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "not-found-property",
+                                        "description"   : "Haven't found a property",
+                                        "text"  : "No",
+                                        "label" : false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "items" : {
+                "cards": [
+                    {   
+                        "id"        : "step-7-card-0",
+                        "type"      : "center pop-up color-3",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "Thanks for your interest! Here are some resources that can assist you right now:" 
+                                },
+                                {
+                                    "id"        : "card-0-body-1",
+                                    "tag"       : "a",
+                                    "link"      : "https://google.com",
+                                    "content"   : "View Property Map" 
+                                },
+                                {
+                                    "id"        : "card-0-body-2",
+                                    "tag"       : "a",
+                                    "link"      : "https://google.com",
+                                    "content"   : "View other web" 
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": [
+                    {
+                        "id"            : "step-7-form-0",
+                        "type"          : "single-button",
+                        "position"      : "center",
+                        "requirements"  : [],
+                        "text"          : {
+                            "type"      : "text",
+                            "markup"    : []
+                        },
+                        "sections"      : [
+                            {
+                                "id"    : "step-7-form-0-section-0",
+                                "items" : [
+                                    {   
+                                        "id"    : "step-7-form-0-section-0-item-0",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "close",
+                                        "description"   : "Close Application",
+                                        "text"  : "End Application",
+                                        "label" : false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "items" : {
+                "cards": [
+                    {   
+                        "id"        : "step-8-card-0",
+                        "type"      : "right pop-up color-3",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : "Helpful Hints and Tips"
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "If you are applying on behalf of another person or business, please use their information for the next few slides." 
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": [
+                    {
+                        "id"            : "step-8-form-0",
+                        "type"          : "single-button",
+                        "position"      : "center",
+                        "requirements"  : [],
+                        "text"          : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "step-8-card-0-body-0",
+                                    "tag"       : "legend",
+                                    "content"   : "Are you applying for yourself or on behalf of someone else?"
+                                }
+                            ]
+                        },
+                        "sections"      : [
+                            {
+                                "id"    : "step-8-form-0-section-0",
+                                "items" : [
+                                    {   
+                                        "id"    : "step-8-form-0-section-0-item-0",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "myself",
+                                        "description"   : "Applying for myself",
+                                        "text"  : "Myself",
+                                        "label" : false
+                                    },
+                                    {   
+                                        "id"    : "step-8-form-0-section-0-item-1",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "someone-else",
+                                        "description"   : "Applying for someone else",
+                                        "text"  : "Someone else",
+                                        "label" : false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "items" : {
+                "cards": [
+                    {   
+                        "id"        : "step-9-card-0",
+                        "type"      : "right pop-up color-3",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : []
+                        }
+                    }
+                ],
+                "forms": [
+                    {
+                        "id"            : "step-9-form-0",
+                        "type"          : "radio-button-plus-other",
+                        "position"      : "center",
+                        "requirements"  : [],
+                        "text"          : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "step-9-card-0-body-0",
+                                    "tag"       : "legend",
+                                    "content"   : "Great! Can you tell us a bit more about your role in this project?"
+                                }
+                            ]
+                        },
+                        "sections"      : [
+                            {
+                                "id"    : "step-9-form-0-section-0",
+                                "items" : [
+                                    {   
+                                        "id"            : "broker",
+                                        "tag"           : "input",
+                                        "type"          : "radio",
+                                        "value"         : "broker",
+                                        "placeholder"   : null,
+                                        "name"          : "role",
+                                        "description"   : "Broker",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelText"     : "Broker"
+                                    },
+                                    {   
+                                        "id"            : "consultant",
+                                        "tag"           : "input",
+                                        "type"          : "radio",
+                                        "value"         : "consultant",
+                                        "placeholder"   : null,
+                                        "name"          : "role",
+                                        "description"   : "Development Consultant",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelText"     : "Development Consultant"
+                                    },
+                                    {   
+                                        "id"            : "officer",
+                                        "tag"           : "input",
+                                        "type"          : "radio",
+                                        "value"         : "officer",
+                                        "placeholder"   : null,
+                                        "name"          : "role",
+                                        "description"   : "Principal / Officer",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelText"     : "Principal / Officer"
+                                    },
+                                    {   
+                                        "id"            : "other",
+                                        "tag"           : "input",
+                                        "type"          : "radio",
+                                        "value"         : "other",
+                                        "placeholder"   : null,
+                                        "name"          : "role",
+                                        "description"   : "Other",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelText"     : "Other"
+                                    },
+                                    {   
+                                        "id"            : "submit",
+                                        "tag"           : "button",
+                                        "type"          : "submit",
+                                        "value"         : "submit",
+                                        "placeholder"   : null,
+                                        "name"          : "submit",
+                                        "description"   : "Submit information",
+                                        "text"          : "Submit",
+                                        "label"         : false,
+                                        "labelText"     : null
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "items" : {
+                "cards": [
+                    {   
+                        "id"        : "step-10-card-0",
+                        "type"      : "right pop-up color-3",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : "Helpful hints and tips"
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "If you are applying on behalf of another person or business, please use their information for the next few questions." 
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": [
+                    {
+                        "id"            : "step-10-form-0",
+                        "type"          : "single-button",
+                        "position"      : "center",
+                        "requirements"  : [],
+                        "text"          : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "legend",
+                                    "content"   : "Are you an individual or business?"
+                                }
+                            ]
+                        },
+                        "sections"      : [
+                            {
+                                "id"    : "step-10-form-0-section-0",
+                                "items" : [
+                                    {   
+                                        "id"    : "step-10-form-0-section-0-item-0",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "individual",
+                                        "description"   : "I'm an individual",
+                                        "text"  : "Individual",
+                                        "label" : false
+                                    },
+                                    {   
+                                        "id"    : "step-10-form-0-section-0-item-1",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "business",
+                                        "description"   : "I'm a business",
+                                        "text"  : "Business",
+                                        "label" : false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "status" : [
+        {
+            "items" : {
+                "cards": [
+                    {   
+                        "id"        : "status-0-card-0",
+                        "type"      : "center pop-up color-2",
+                        "title"     : {
+                            "type"  : "Medium",
+                            "value" : "Application Status Form"
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : []
+                        }
+                    },
+                    {   
+                        "id"        : "status-0-card-1",
+                        "type"      : "right pop-up color-3",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : "Helpful hints and tips"
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "Use the email you provided when creating your application." 
+                                },
+                                {
+                                    "id"        : "card-0-body-1",
+                                    "tag"       : "p",
+                                    "content"   : "An application number was given to you after successfully completing your form." 
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": [
+                    {
+                        "id"            : "status-0-form-0",
+                        "type"          : "single-button",
+                        "position"      : "center",
+                        "requirements"  : [],
+                        "text"          : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "legend",
+                                    "content"   : "Enter required information."
+                                }
+                            ]
+                        },
+                        "sections"      : [
+                            {
+                                "id"    : "status-0-form-0-section-0",
+                                "items" : [
+                                    {   
+                                        "id"    : "status-0-form-0-section-0-item-0",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "own-property",
+                                        "description"   : "Own property in Detroit",
+                                        "text"  : "Yes",
+                                        "label" : false
+                                    },
+                                    {   
+                                        "id"    : "status-0-form-0-section-0-item-1",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "not-own-property",
+                                        "description"   : "Don't own property in Detroit",
+                                        "text"  : "No",
+                                        "label" : false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

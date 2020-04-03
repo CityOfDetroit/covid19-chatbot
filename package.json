@@ -1,0 +1,31 @@
+{
+  "name": "covid19-chatbot",
+  "version": "1.0.0",
+  "description": "City of Detroit Health chatbot to assist residents get a self-check.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CityOfDetroit/covid19-chatbot.git"
+  },
+  "scripts": {
+    "start": "parcel src/index.html --https --no-cache -p 3000",
+    "test": "./node_modules/.bin/cypress open",
+    "build": "parcel build src/index.js --no-cache --public-url '.' -d build"
+  },
+  "author": "Edgar Montes",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
+    "cypress": "^4.3.0",
+    "eslint-plugin-cypress": "^2.10.3",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "react-test-renderer": "^16.13.1",
+    "sass": "^1.26.3"
+  }
+}

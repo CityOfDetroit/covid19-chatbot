@@ -1,0 +1,40 @@
+// Colors
+@import '../colors.scss';
+
+.Card{
+    padding: 0 .5em;
+    margin: .5em;
+
+    .Card-Body{
+        padding: .25em;
+    }
+}
+
+.Card.color-1{
+    background-color: $color-1;
+    color: $white;
+}
+.Card.color-2{
+    background-color: $color-2;
+    color: $color-1;
+}
+.Card.color-3{
+    background-color: $color-3;
+    color: $black;
+}
+.Card.color-4{
+    background-color: $color-4;
+    color: $black;
+}
+.Card.color-5{
+    background-color: $color-5;
+    color: $white;
+}
+.Card.color-light{
+    background-color: $white;
+    color: $black;
+}
+.Card.color-dark{
+    background-color: $black;
+    color: $white;
+}

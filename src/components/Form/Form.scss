@@ -1,0 +1,15 @@
+@import '../colors.scss';
+form.single-button{
+    fieldset{
+        border: none;
+        padding: 0;
+        margin: 0;
+
+        button{
+            background-color: $color-1;
+            color: $white;
+            padding: .5em;
+            border: none;
+        }
+    }
+}
