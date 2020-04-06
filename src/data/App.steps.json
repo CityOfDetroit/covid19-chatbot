@@ -2531,7 +2531,7 @@
                 ],
                 "cards": [
                     {   
-                        "id"        : "step-21-card-0",
+                        "id"        : "step-28-card-0",
                         "type"      : "right pop-up color-2",
                         "title"     : {
                             "type"  : "small",
@@ -2543,14 +2543,614 @@
                                 {
                                     "id"        : "card-0-body-0",
                                     "tag"       : "p",
-                                    "content"   : "Sorry you’re feeling ill. Stay at home and monitor your symptoms. Call your provider if you get worse." 
+                                    "content"   : "Do you (they) have any of the following? (Check any)" 
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": [
+                    {
+                        "id"            : "step-28-form-0",
+                        "type"          : "checkbox-set",
+                        "position"      : "center",
+                        "requirements"  : [],
+                        "text"          : {
+                            "type"      : "text",
+                            "markup"    : []
+                        },
+                        "sections"      : [
+                            {
+                                "id"    : "step-28-form-0-section-0",
+                                "items" : [
+                                    {   
+                                        "id"            : "fever",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "fever",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "Fever or feeling feverish (chills, sweating)",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "Fever or feeling feverish (chills, sweating)"
+                                    },
+                                    {   
+                                        "id"            : "breath",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "breath",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "Shortness of breath (not severe)",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "Shortness of breath (not severe)"
+                                    },
+                                    {   
+                                        "id"            : "cough",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "cough",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "Cough",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "Cough"
+                                    },
+                                    {   
+                                        "id"            : "other",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "other",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "Other",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "Other"
+                                    },
+                                    {   
+                                        "id"            : "submit",
+                                        "tag"           : "button",
+                                        "type"          : "submit",
+                                        "value"         : "submit",
+                                        "placeholder"   : null,
+                                        "name"          : "submit",
+                                        "description"   : "Submit",
+                                        "text"          : "Submit",
+                                        "label"         : false,
+                                        "labelPosition" : null,
+                                        "labelText"     : null
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "items" : {
+                "header": [
+                    {
+                        "id": "self-checker",
+                        "text": "COVID-19 Self-Cheker",
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
+                "cards": [
+                    {   
+                        "id"        : "step-29-card-0",
+                        "type"      : "right pop-up color-2",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "Do you (they) have any of the following? (Check any)" 
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": [
+                    {
+                        "id"            : "step-29-form-0",
+                        "type"          : "checkbox-set",
+                        "position"      : "center",
+                        "requirements"  : [],
+                        "text"          : {
+                            "type"      : "text",
+                            "markup"    : []
+                        },
+                        "sections"      : [
+                            {
+                                "id"    : "step-29-form-0-section-0",
+                                "items" : [
+                                    {   
+                                        "id"            : "nose",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "nose",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "Runny or stuffy nose",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "Runny or stuffy nose"
+                                    },
+                                    {   
+                                        "id"            : "throat",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "throat",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "Sore throat",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "Sore throat"
+                                    },
+                                    {   
+                                        "id"            : "aches",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "aches",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "Muscle aches, body aches, or headache",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "Muscle aches, body aches, or headache"
+                                    },
+                                    {   
+                                        "id"            : "fatigue",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "fatigue",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "Tiredness or fatigue",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "Tiredness or fatigue"
+                                    },
+                                    {   
+                                        "id"            : "fatigue",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "fatigue",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "Nausea, vomiting, or diarrhea ",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "Nausea, vomiting, or diarrhea "
+                                    },
+                                    {   
+                                        "id"            : "other",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "other",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "None of the above",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "None of the above"
+                                    },
+                                    {   
+                                        "id"            : "submit",
+                                        "tag"           : "button",
+                                        "type"          : "submit",
+                                        "value"         : "submit",
+                                        "placeholder"   : null,
+                                        "name"          : "submit",
+                                        "description"   : "Submit",
+                                        "text"          : "Submit",
+                                        "label"         : false,
+                                        "labelPosition" : null,
+                                        "labelText"     : null
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "items" : {
+                "header": [
+                    {
+                        "id": "self-checker",
+                        "text": "COVID-19 Self-Cheker",
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
+                "cards": [
+                    {   
+                        "id"        : "step-30-card-0",
+                        "type"      : "right pop-up color-2",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "Do you (they) live in a long-term care facility or nursing home?" 
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": [
+                    {
+                        "id"            : "step-30-form-0",
+                        "type"          : "single-button",
+                        "position"      : "center",
+                        "requirements"  : [],
+                        "text"          : {
+                            "type"      : "text",
+                            "markup"    : []
+                        },
+                        "sections"      : [
+                            {
+                                "id"    : "step-30-form-0-section-0",
+                                "items" : [
+                                    {   
+                                        "id"    : "step-30-form-0-section-0-item-0",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "yes",
+                                        "description"   : "Live in  nursing home",
+                                        "text"  : "Yes",
+                                        "label" : false
+                                    },
+                                    {   
+                                        "id"    : "step-30-form-0-section-0-item-1",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "no",
+                                        "description"   : "Doesn't live in nursing home",
+                                        "text"  : "No",
+                                        "label" : false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "items" : {
+                "header": [
+                    {
+                        "id": "self-checker",
+                        "text": "COVID-19 Self-Cheker",
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
+                "cards": [
+                    {   
+                        "id"        : "step-31-card-0",
+                        "type"      : "right pop-up color-2",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : " In the last two weeks have you (they) worked or volunteered in a hospital, emergency room, clinic, medical office, long-term care facility or nursing home, ambulance service, first responder services, or any health care setting or taken care of patients as a student or part of your work?" 
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": [
+                    {
+                        "id"            : "step-31-form-0",
+                        "type"          : "single-button",
+                        "position"      : "center",
+                        "requirements"  : [],
+                        "text"          : {
+                            "type"      : "text",
+                            "markup"    : []
+                        },
+                        "sections"      : [
+                            {
+                                "id"    : "step-31-form-0-section-0",
+                                "items" : [
+                                    {   
+                                        "id"    : "step-31-form-0-section-0-item-0",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "yes",
+                                        "description"   : "Was around health care setting",
+                                        "text"  : "Yes",
+                                        "label" : false
+                                    },
+                                    {   
+                                        "id"    : "step-31-form-0-section-0-item-1",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "no",
+                                        "description"   : "Wasn't around health care setting",
+                                        "text"  : "No",
+                                        "label" : false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "items" : {
+                "header": [
+                    {
+                        "id": "self-checker",
+                        "text": "COVID-19 Self-Cheker",
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
+                "cards": [
+                    {   
+                        "id"        : "step-32-card-0",
+                        "type"      : "right pop-up color-2",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : " Do you have any of the following conditions (check any)" 
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": [
+                    {
+                        "id"            : "step-32-form-0",
+                        "type"          : "checkbox-set",
+                        "position"      : "center",
+                        "requirements"  : [],
+                        "text"          : {
+                            "type"      : "text",
+                            "markup"    : []
+                        },
+                        "sections"      : [
+                            {
+                                "id"    : "step-32-form-0-section-0",
+                                "items" : [
+                                    {   
+                                        "id"            : "lung",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "lung",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "Chronic lung disease, moderate to severe asthma, or smoking",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "Chronic lung disease, moderate to severe asthma, or smoking"
+                                    },
+                                    {   
+                                        "id"            : "heart",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "heart",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "Serious heart conditions",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "Serious heart conditions"
+                                    },
+                                    {   
+                                        "id"            : "immune",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "immune",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "Weakened immune system (cancer treatment, prolonged use of steroids, transplant or HIV/AIDS",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "Weakened immune system (cancer treatment, prolonged use of steroids, transplant or HIV/AIDS"
+                                    },
+                                    {   
+                                        "id"            : "pregnancy",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "pregnancy",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "Pregnancy",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "Pregnancy"
+                                    },
+                                    {   
+                                        "id"            : "obesity",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "obesity",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "Severe obesity (Body Mass Index [BMI] ≥ 40)",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "Severe obesity (Body Mass Index [BMI] ≥ 40)"
+                                    },
+                                    {   
+                                        "id"            : "underlying",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "underlying",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "Underlying conditions (diabetes, renal failure, or liver disease)",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "Underlying conditions (diabetes, renal failure, or liver disease)"
+                                    },
+                                    {   
+                                        "id"            : "other",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "other",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "None of the above",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "None of the above"
+                                    },
+                                    {   
+                                        "id"            : "submit",
+                                        "tag"           : "button",
+                                        "type"          : "submit",
+                                        "value"         : "submit",
+                                        "placeholder"   : null,
+                                        "name"          : "submit",
+                                        "description"   : "Submit",
+                                        "text"          : "Submit",
+                                        "label"         : false,
+                                        "labelPosition" : null,
+                                        "labelText"     : null
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "items" : {
+                "header": [
+                    {
+                        "id": "self-checker",
+                        "text": "COVID-19 Self-Cheker",
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
+                "cards": [
+                    {   
+                        "id"        : "step-33-card-0",
+                        "type"      : "right pop-up color-3",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "Stay at home and take care of yourself. Call your provider if you get worse" 
+                                },
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "Contact the occupational health provider at your workplace immediately" 
                                 }
                             ]
                         }
                     },
                     {   
-                        "id"        : "step-21-card-0",
-                        "type"      : "right pop-up color-2",
+                        "id"        : "step-33-card-0",
+                        "type"      : "right pop-up color-3",
                         "title"     : {
                             "type"  : "small",
                             "value" : null
@@ -2567,8 +3167,860 @@
                         }
                     },
                     {   
-                        "id"        : "step-21-card-0",
+                        "id"        : "step-33-card-0",
+                        "type"      : "right pop-up color-3",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-2-body-0",
+                                    "tag"       : "a",
+                                    "link"      : "https://detroitmi.gov/departments/detroit-health-department/programs-and-services/communicable-disease/coronavirus-covid-19/dont-have-doctor",
+                                    "content"   : "Visit City of Detroit's Website" 
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": []
+            }
+        },
+        {
+            "items" : {
+                "header": [
+                    {
+                        "id": "self-checker",
+                        "text": "COVID-19 Self-Cheker",
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
+                "cards": [
+                    {   
+                        "id"        : "step-34-card-0",
                         "type"      : "right pop-up color-2",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "Do you (they) live in a long-term care facility or nursing home?" 
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": [
+                    {
+                        "id"            : "step-34-form-0",
+                        "type"          : "single-button",
+                        "position"      : "center",
+                        "requirements"  : [],
+                        "text"          : {
+                            "type"      : "text",
+                            "markup"    : []
+                        },
+                        "sections"      : [
+                            {
+                                "id"    : "step-34-form-0-section-0",
+                                "items" : [
+                                    {   
+                                        "id"    : "step-34-form-0-section-0-item-0",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "yes",
+                                        "description"   : "Live in  nursing home",
+                                        "text"  : "Yes",
+                                        "label" : false
+                                    },
+                                    {   
+                                        "id"    : "step-34-form-0-section-0-item-1",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "no",
+                                        "description"   : "Doesn't live in nursing home",
+                                        "text"  : "No",
+                                        "label" : false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "items" : {
+                "header": [
+                    {
+                        "id": "self-checker",
+                        "text": "COVID-19 Self-Cheker",
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
+                "cards": [
+                    {   
+                        "id"        : "step-35-card-0",
+                        "type"      : "right pop-up color-2",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : " Do you have any of the following conditions (check any)" 
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": [
+                    {
+                        "id"            : "step-35-form-0",
+                        "type"          : "checkbox-set",
+                        "position"      : "center",
+                        "requirements"  : [],
+                        "text"          : {
+                            "type"      : "text",
+                            "markup"    : []
+                        },
+                        "sections"      : [
+                            {
+                                "id"    : "step-35-form-0-section-0",
+                                "items" : [
+                                    {   
+                                        "id"            : "lung",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "lung",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "Chronic lung disease, moderate to severe asthma, or smoking",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "Chronic lung disease, moderate to severe asthma, or smoking"
+                                    },
+                                    {   
+                                        "id"            : "heart",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "heart",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "Serious heart conditions",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "Serious heart conditions"
+                                    },
+                                    {   
+                                        "id"            : "immune",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "immune",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "Weakened immune system (cancer treatment, prolonged use of steroids, transplant or HIV/AIDS",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "Weakened immune system (cancer treatment, prolonged use of steroids, transplant or HIV/AIDS"
+                                    },
+                                    {   
+                                        "id"            : "pregnancy",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "pregnancy",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "Pregnancy",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "Pregnancy"
+                                    },
+                                    {   
+                                        "id"            : "obesity",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "obesity",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "Severe obesity (Body Mass Index [BMI] ≥ 40)",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "Severe obesity (Body Mass Index [BMI] ≥ 40)"
+                                    },
+                                    {   
+                                        "id"            : "underlying",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "underlying",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "Underlying conditions (diabetes, renal failure, or liver disease)",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "Underlying conditions (diabetes, renal failure, or liver disease)"
+                                    },
+                                    {   
+                                        "id"            : "other",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "other",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "None of the above",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "None of the above"
+                                    },
+                                    {   
+                                        "id"            : "submit",
+                                        "tag"           : "button",
+                                        "type"          : "submit",
+                                        "value"         : "submit",
+                                        "placeholder"   : null,
+                                        "name"          : "submit",
+                                        "description"   : "Submit",
+                                        "text"          : "Submit",
+                                        "label"         : false,
+                                        "labelPosition" : null,
+                                        "labelText"     : null
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "items" : {
+                "header": [
+                    {
+                        "id": "self-checker",
+                        "text": "COVID-19 Self-Cheker",
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
+                "cards": [
+                    {   
+                        "id"        : "step-36-card-0",
+                        "type"      : "right pop-up color-2",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : " In the last two weeks have you (they) worked or volunteered in a hospital, emergency room, clinic, medical office, long-term care facility or nursing home, ambulance service, first responder services, or any health care setting or taken care of patients as a student or part of your work?" 
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": [
+                    {
+                        "id"            : "step-36-form-0",
+                        "type"          : "single-button",
+                        "position"      : "center",
+                        "requirements"  : [],
+                        "text"          : {
+                            "type"      : "text",
+                            "markup"    : []
+                        },
+                        "sections"      : [
+                            {
+                                "id"    : "step-36-form-0-section-0",
+                                "items" : [
+                                    {   
+                                        "id"    : "step-36-form-0-section-0-item-0",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "yes",
+                                        "description"   : "Was around health care setting",
+                                        "text"  : "Yes",
+                                        "label" : false
+                                    },
+                                    {   
+                                        "id"    : "step-36-form-0-section-0-item-1",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "no",
+                                        "description"   : "Wasn't around health care setting",
+                                        "text"  : "No",
+                                        "label" : false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "items" : {
+                "header": [
+                    {
+                        "id": "self-checker",
+                        "text": "COVID-19 Self-Cheker",
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
+                "cards": [
+                    {   
+                        "id"        : "step-37-card-0",
+                        "type"      : "right pop-up color-3",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "Sorry you’re feeling sick. Call a medical provider within 24 hours." 
+                                },
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "Contact the occupational health provider at your workplace immediately." 
+                                }
+                            ]
+                        }
+                    },
+                    {   
+                        "id"        : "step-37-card-0",
+                        "type"      : "right pop-up color-3",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-1-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "If you don't have a doctor or are uninsured. Visit the City of Detroit's website to find a doctor near you." 
+                                }
+                            ]
+                        }
+                    },
+                    {   
+                        "id"        : "step-37-card-0",
+                        "type"      : "right pop-up color-3",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-2-body-0",
+                                    "tag"       : "a",
+                                    "link"      : "https://detroitmi.gov/departments/detroit-health-department/programs-and-services/communicable-disease/coronavirus-covid-19/dont-have-doctor",
+                                    "content"   : "Visit City of Detroit's Website" 
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": []
+            }
+        },
+        {
+            "items" : {
+                "header": [
+                    {
+                        "id": "self-checker",
+                        "text": "COVID-19 Self-Cheker",
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
+                "cards": [
+                    {   
+                        "id"        : "step-38-card-0",
+                        "type"      : "right pop-up color-2",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : " Do you have any of the following conditions (check any)" 
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": [
+                    {
+                        "id"            : "step-38-form-0",
+                        "type"          : "checkbox-set",
+                        "position"      : "center",
+                        "requirements"  : [],
+                        "text"          : {
+                            "type"      : "text",
+                            "markup"    : []
+                        },
+                        "sections"      : [
+                            {
+                                "id"    : "step-38-form-0-section-0",
+                                "items" : [
+                                    {   
+                                        "id"            : "lung",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "lung",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "Chronic lung disease, moderate to severe asthma, or smoking",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "Chronic lung disease, moderate to severe asthma, or smoking"
+                                    },
+                                    {   
+                                        "id"            : "heart",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "heart",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "Serious heart conditions",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "Serious heart conditions"
+                                    },
+                                    {   
+                                        "id"            : "immune",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "immune",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "Weakened immune system (cancer treatment, prolonged use of steroids, transplant or HIV/AIDS",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "Weakened immune system (cancer treatment, prolonged use of steroids, transplant or HIV/AIDS"
+                                    },
+                                    {   
+                                        "id"            : "pregnancy",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "pregnancy",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "Pregnancy",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "Pregnancy"
+                                    },
+                                    {   
+                                        "id"            : "obesity",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "obesity",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "Severe obesity (Body Mass Index [BMI] ≥ 40)",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "Severe obesity (Body Mass Index [BMI] ≥ 40)"
+                                    },
+                                    {   
+                                        "id"            : "underlying",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "underlying",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "Underlying conditions (diabetes, renal failure, or liver disease)",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "Underlying conditions (diabetes, renal failure, or liver disease)"
+                                    },
+                                    {   
+                                        "id"            : "other",
+                                        "tag"           : "input",
+                                        "type"          : "checkbox",
+                                        "grouping"      : true,
+                                        "value"         : "other",
+                                        "required"      : true,
+                                        "placeholder"   : null,
+                                        "name"          : "symptoms",
+                                        "description"   : "None of the above",
+                                        "text"          : "",
+                                        "label"         : true,
+                                        "labelPosition" : "after",
+                                        "labelText"     : "None of the above"
+                                    },
+                                    {   
+                                        "id"            : "submit",
+                                        "tag"           : "button",
+                                        "type"          : "submit",
+                                        "value"         : "submit",
+                                        "placeholder"   : null,
+                                        "name"          : "submit",
+                                        "description"   : "Submit",
+                                        "text"          : "Submit",
+                                        "label"         : false,
+                                        "labelPosition" : null,
+                                        "labelText"     : null
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "items" : {
+                "header": [
+                    {
+                        "id": "self-checker",
+                        "text": "COVID-19 Self-Cheker",
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
+                "cards": [
+                    {   
+                        "id"        : "step-39-card-0",
+                        "type"      : "right pop-up color-2",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : " In the last two weeks have you (they) worked or volunteered in a hospital, emergency room, clinic, medical office, long-term care facility or nursing home, ambulance service, first responder services, or any health care setting or taken care of patients as a student or part of your work?" 
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": [
+                    {
+                        "id"            : "step-39-form-0",
+                        "type"          : "single-button",
+                        "position"      : "center",
+                        "requirements"  : [],
+                        "text"          : {
+                            "type"      : "text",
+                            "markup"    : []
+                        },
+                        "sections"      : [
+                            {
+                                "id"    : "step-39-form-0-section-0",
+                                "items" : [
+                                    {   
+                                        "id"    : "step-39-form-0-section-0-item-0",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "yes",
+                                        "description"   : "Was around health care setting",
+                                        "text"  : "Yes",
+                                        "label" : false
+                                    },
+                                    {   
+                                        "id"    : "step-39-form-0-section-0-item-1",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "no",
+                                        "description"   : "Wasn't around health care setting",
+                                        "text"  : "No",
+                                        "label" : false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "items" : {
+                "header": [
+                    {
+                        "id": "self-checker",
+                        "text": "COVID-19 Self-Cheker",
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
+                "cards": [
+                    {   
+                        "id"        : "step-40-card-0",
+                        "type"      : "right pop-up color-2",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : " In the last two weeks have you (they) worked or volunteered in a hospital, emergency room, clinic, medical office, long-term care facility or nursing home, ambulance service, first responder services, or any health care setting or taken care of patients as a student or part of your work?" 
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": [
+                    {
+                        "id"            : "step-40-form-0",
+                        "type"          : "single-button",
+                        "position"      : "center",
+                        "requirements"  : [],
+                        "text"          : {
+                            "type"      : "text",
+                            "markup"    : []
+                        },
+                        "sections"      : [
+                            {
+                                "id"    : "step-40-form-0-section-0",
+                                "items" : [
+                                    {   
+                                        "id"    : "step-40-form-0-section-0-item-0",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "yes",
+                                        "description"   : "Was around health care setting",
+                                        "text"  : "Yes",
+                                        "label" : false
+                                    },
+                                    {   
+                                        "id"    : "step-40-form-0-section-0-item-1",
+                                        "tag"   : "button",
+                                        "type"  : "submit",
+                                        "name"  : "no",
+                                        "description"   : "Wasn't around health care setting",
+                                        "text"  : "No",
+                                        "label" : false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "items" : {
+                "header": [
+                    {
+                        "id": "self-checker",
+                        "text": "COVID-19 Self-Cheker",
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
+                "cards": [
+                    {   
+                        "id"        : "step-41-card-0",
+                        "type"      : "right pop-up color-3",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "Sorry you’re feeling sick. Call medical provider within 24 hours" 
+                                },
+                                {
+                                    "id"        : "card-0-body-1",
+                                    "tag"       : "p",
+                                    "content"   : "Contact the occupational health provider at your workplace immediately." 
+                                }
+                            ]
+                        }
+                    },
+                    {   
+                        "id"        : "step-41-card-1",
+                        "type"      : "right pop-up color-3",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-1-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "If you don't have a doctor or are uninsured. Visit the City of Detroit's website to find a doctor near you." 
+                                }
+                            ]
+                        }
+                    },
+                    {   
+                        "id"        : "step-41-card-2",
+                        "type"      : "right pop-up color-3",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-2-body-0",
+                                    "tag"       : "a",
+                                    "link"      : "https://detroitmi.gov/departments/detroit-health-department/programs-and-services/communicable-disease/coronavirus-covid-19/dont-have-doctor",
+                                    "content"   : "Visit City of Detroit's Website" 
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": []
+            }
+        },
+        {
+            "items" : {
+                "header": [
+                    {
+                        "id": "self-checker",
+                        "text": "COVID-19 Self-Cheker",
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
+                "cards": [
+                    {   
+                        "id"        : "step-42-card-0",
+                        "type"      : "right pop-up color-3",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "Stay home and take care of yourself in home isolation. Call medical provider within 24 hours." 
+                                }
+                            ]
+                        }
+                    },
+                    {   
+                        "id"        : "step-42-card-1",
+                        "type"      : "right pop-up color-3",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : null
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-1-body-0",
+                                    "tag"       : "p",
+                                    "content"   : "If you don't have a doctor or are uninsured. Visit the City of Detroit's website to find a doctor near you." 
+                                }
+                            ]
+                        }
+                    },
+                    {   
+                        "id"        : "step-42-card-2",
+                        "type"      : "right pop-up color-3",
                         "title"     : {
                             "type"  : "small",
                             "value" : null

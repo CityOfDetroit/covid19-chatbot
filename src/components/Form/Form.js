@@ -140,6 +140,7 @@ function Form(props) {
         console.log(e.target);
         e.preventDefault();
         let tempFormData;
+        let tempSynthoms = [];
         switch (step) {
             case 0:
                 switch (buildType) {
@@ -326,12 +327,12 @@ function Form(props) {
                 if(btnState == 'Yes'){
                     setStep(15);
                 }else{
-                    setStep(23); 
+                    setStep(28); 
                 }
                 break;
 
             case 15:
-                let tempSynthoms = [];
+                tempSynthoms = [];
                 Array.from(e.target.elements).forEach(element => {
                     if(element.checked){
                         tempSynthoms.push(element.id);
@@ -418,7 +419,135 @@ function Form(props) {
                 break;
 
             case 27:
-                setStep(28);
+                setStep(26);
+                break;
+
+            case 28:
+                tempSynthoms = [];
+                let covidCout = 0;
+                Array.from(e.target.elements).forEach(element => {
+                    if(element.checked){
+                        tempSynthoms.push(element.id);
+                    }
+                });
+                if(tempSynthoms.length > 1){
+                    tempSynthoms.forEach((syn) => {
+                        (syn == 'other') ? 0 : covidCout++;
+                    });
+                    if(covidCout > 1){
+                        setStep(34);
+                    }else{
+                        setStep(30);
+                    }
+                }else{
+                    (tempSynthoms[0] == 'other') ? setStep(29) : setStep(30);
+                }
+                break;
+
+            case 29:
+                setStep(26);
+                break;
+
+            case 30:
+                if(btnState == 'Yes'){
+                    setStep(17);
+                }else{
+                    if(formData.age.values[0] >= 19){
+                        setStep(31);
+                    }else{
+                        setStep(32);
+                    }
+                }
+                break;
+
+            case 31:
+                if(btnState == 'Yes'){
+                    setStep(33);
+                }else{
+                    setStep(32);
+                }
+                break;
+
+            case 32:
+                setStep(22);
+                break;
+
+            case 33:
+                break;
+
+            case 34:
+                if(btnState == 'Yes'){
+                    setStep(17);
+                }else{
+                    if(formData.age.values[0] >= 65){
+                        setStep(38);
+                    }else{
+                        setStep(35);
+                    }
+                }
+                break;
+
+            case 35:
+                tempSynthoms = [];
+                Array.from(e.target.elements).forEach(element => {
+                    if(element.checked){
+                        tempSynthoms.push(element.id);
+                    }
+                });
+                if(tempSynthoms.length > 1){
+                    if(formData.age.values[0] >= 19){
+                        setStep(36);
+                    }else{
+                        setStep(21);
+                    }
+                }else{
+                    if(formData.age.values[0] >= 19){
+                        setStep(36);
+                    }else{
+                        setStep(22);
+                    }
+                }
+                break;
+
+            case 36:
+                if(btnState == 'Yes'){
+                    setStep(37);
+                }else{
+                    setStep(22);
+                }
+                break;
+
+            case 37:
+                break;
+
+            case 38:
+                tempSynthoms = [];
+                Array.from(e.target.elements).forEach(element => {
+                    if(element.checked){
+                        tempSynthoms.push(element.id);
+                    }
+                });
+                if(tempSynthoms.length > 1){
+                    setStep(40);
+                }else{
+                    (tempSynthoms[0] == 'other') ? setStep(39) : setStep(40);
+                }
+                break;
+
+            case 39:
+                if(btnState == 'Yes'){
+                    setStep(19);
+                }else{
+                    setStep(42);
+                }
+                break;
+
+            case 40:
+                if(btnState == 'Yes'){
+                    setStep(37);
+                }else{
+                    setStep(41);
+                }
                 break;
         
             default:

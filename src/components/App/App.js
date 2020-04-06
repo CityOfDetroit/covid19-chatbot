@@ -30,6 +30,7 @@ function App() {
 
     const closeChat = (e) => {
         e.preventDefault();
+        setFormData(undefined);
         setBuildType('application');
         setStep(undefined);
     }
