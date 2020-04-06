@@ -1,13 +1,55 @@
 @import '../colors.scss';
 form.single-button{
-    fieldset{
+    padding: .5em;
+
+    .grouping{
         border: none;
         padding: 0;
         margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
 
         div{
-            float: left;
+            margin-right: .5em;
+            margin-bottom: .5em;
 
+            button{
+                background-color: $color-1;
+                color: $white;
+                padding: .5em;
+                border: none;
+                cursor: pointer;
+            }
+
+            button:hover{
+                background-color: $color-3;
+                color: $black;
+            }
+        }
+    }
+}
+
+form.input-submit{
+    padding: .5em;
+
+    .grouping{
+        border: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: stretch;
+
+        div:first-child{
+            flex: 1;
+
+            input{
+                width: 100%;
+                padding: .31em;
+            }
+        }
+
+        div{
             button{
                 background-color: $color-1;
                 color: $white;
@@ -18,8 +60,8 @@ form.single-button{
             }
 
             button:hover{
-                background-color: $color-2;
-                color: $color-1;
+                background-color: $color-3;
+                color: $black;
             }
         }
     }

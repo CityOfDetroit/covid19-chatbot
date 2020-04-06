@@ -1,17 +1,51 @@
 @import '../colors.scss';
+#chatbot{
+    position: fixed;
+    top: calc(50vh - 2em);
+    right: 0;
+
+    button{
+        width: 4em;
+        height: 4em;
+        border-radius: 50%;
+        display: flex;
+        -webkit-box-shadow: 10px 10px 26px -9px rgba(0,0,0,0.3);
+        -moz-box-shadow: 10px 10px 26px -9px rgba(0,0,0,0.3);
+        box-shadow: 10px 10px 26px -9px rgba(0,0,0,0.3);
+        cursor: pointer;
+
+        i{
+            color: $color-1;
+            font-size: 2em;
+            margin: auto;
+        }
+    }
+
+    button:hover{
+        -webkit-box-shadow: 10px 10px 35px 0px rgba(0,68,69,1);
+        -moz-box-shadow: 10px 10px 35px 0px rgba(0,68,69,1);
+        box-shadow: 10px 10px 35px 0px rgba(0,68,69,1);
+    }
+}
 #App{
-    width: 100%;
-    height: 100vh;
-    position: relative;
+    width: 25em;
+    max-width: 90%;
+    position: fixed;
     display: flex;
+    bottom: .5em;
+    right: .5em;
 
     .Panel{
+        height: 35em;
         position: relative;
         margin: auto;
-        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        background-color: $grey;
 
         .chat{
             margin-bottom: .5em;
+            flex: 1;
 
             .header{
                 background-color: $color-1;
@@ -53,6 +87,11 @@
                     }
                 }
             }
+        }
+
+        .conversation{
+            height: 31em;
+            overflow-y: auto;
         }
     }
 }

@@ -5,25 +5,33 @@ import Form from '../Form/Form';
 import data from '../../data/App.steps.json';
 
 function App() {
-    const [step, setStep] = useState(0);
+    const [step, setStep] = useState();
     const [formData, setFormData] = useState();
     const [buildType, setBuildType] = useState('application');
 
     const buildContent = () => {
-        const markup = 
-        <section id="App">
-            <article className="Panel">
-            {buildChat()}
-            {buildForms(data[buildType][step].items)}
-            </article>
-        </section>
-        return markup;
+        if(step != undefined){
+            const markup = 
+            <section id="App">
+                <article className="Panel">
+                {buildChat()}
+                </article>
+            </section>
+            return markup;
+        }else{
+            return <section id="chatbot" onClick={startChatbot}><button><i className="fas fa-comment-dots"></i></button></section>
+        }
+    }
+
+    const startChatbot = () => {
+        setBuildType('application');
+        setStep(0);
     }
 
     const closeChat = (e) => {
         e.preventDefault();
         setBuildType('application');
-        setStep(0);
+        setStep(undefined);
     }
 
     const buildHeader = (items) => {
@@ -42,7 +50,10 @@ function App() {
         const markup = 
         <article className="chat">
             {buildHeader(data[buildType][step].items)}
+            <div className="conversation">
             {buildCards(data[buildType][step].items)}
+            {buildForms(data[buildType][step].items)}
+            </div>
         </article>
         return markup;
     }

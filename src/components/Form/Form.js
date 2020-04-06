@@ -30,11 +30,11 @@ function Form(props) {
 
     const buildSections = () => {
         const markup = props.sections.map((section) =>
-           <fieldset key={section.id}>
+           <section key={section.id} className="grouping">
                {buildItems(section.items)}
                {buildAgents()}
                {(agents > 0) ? <button type="submit" onClick={(e)=>{setbtnState(e.target.innerText)}}>Done</button> : ''}
-           </fieldset>
+           </section>
         );
         return markup;
     }
@@ -65,8 +65,9 @@ function Form(props) {
     const buildItems = (items) => {
         const markup = items.map((item) => 
             <div key={item.id}>
-                {(item.label) ? <label htmlFor={item.id}>{item.labelText}</label> : ''}
+                {(item.labelPosition != "after") ? (item.label) ? <label htmlFor={item.id}>{item.labelText}</label> : '' : ''}
                 {buildTag(item)}
+                {(item.labelPosition == "after") ? (item.label) ? <label htmlFor={item.id}>{item.labelText}</label> : '' : ''}
             </div>
         );
         return markup;
@@ -93,15 +94,19 @@ function Form(props) {
             default:
                 switch (item.type) {
                     case 'radio':
-                        markup = <input type={item.type} id={item.id} name={item.name} value={item.value} onChange={handleChange} required></input>;
+                        markup = <input type={item.type} id={item.id} name={item.name} value={item.value} onChange={handleChange} required={item.required}></input>;
+                        break;
+
+                    case 'checkbox':
+                        markup = <input type={item.type} id={item.id} name={item.name} value={item.value} onChange={handleChange} required={item.required} onChange={handleGroupingRequired} data-grouping={item.grouping}></input>;
                         break;
                     
                     case 'text':
-                        markup = <input type={item.type} id={item.id} name={item.name} disabled={item.disabled} placeholder={item.placeholder}></input>;
+                        markup = <input type={item.type} id={item.id} name={item.name} disabled={item.disabled} placeholder={item.placeholder} required={item.required}></input>;
                         break;
 
                     case 'number':
-                        markup = <input type={item.type} id={item.id} name={item.name} disabled={item.disabled} placeholder={item.placeholder}></input>;
+                        markup = <input type={item.type} id={item.id} name={item.name} disabled={item.disabled} placeholder={item.placeholder} required={item.required}></input>;
                         break;
                 
                     default:
@@ -115,25 +120,86 @@ function Form(props) {
         return markup;
     }
 
+    const handleGroupingRequired = (e) => {
+        let isChecked = false;
+        if(e.target.getAttribute('data-grouping') == 'true'){
+            Array.from(e.target.parentElement.parentElement.parentElement.elements).forEach(element => {
+                if(element.checked){
+                    isChecked = true;
+                }
+            });
+            if(isChecked){
+                Array.from(e.target.parentElement.parentElement.parentElement.elements).forEach(element => {
+                    element.required = false;
+                });
+            }
+        }
+    }
+
     const handleSubmit = (e) => {
         console.log(e.target);
         e.preventDefault();
         let tempFormData;
         switch (step) {
             case 0:
-                switch (btnState) {
-                    case "Self check":
-                        setStep(1);
+                switch (buildType) {
+                    case "application":
+                        switch (btnState) {
+                            case "Self check":
+                                setStep(1);
+                                break;
+        
+                            case "COVID-19 FAQs":
+                                setBuildType('faq');
+                                setStep(0);
+                            break;
+        
+                            case "Resources":
+                                setBuildType('resources');
+                                setStep(0);
+                        
+                            default:
+                                break;
+                        }
                         break;
 
-                    case "COVID-19 FAQs":
-                        setBuildType('faq');
-                        setStep(0);
-                    break;
+                    case "resources":
+                        switch (btnState) {
+                            case "Food":
+                                setStep(1);
+                                break;
+        
+                            case "Water":
+                                setStep(2);
+                                break;
+        
+                            case "Jobs":
+                                setStep(3);
+                                break;
 
-                    case "Resources":
-                        setBuildType('resources');
-                        setStep(0);
+                            case "Business":
+                                setStep(4);
+                                break;
+                        
+                            default:
+                                break;
+                        }
+                        break;
+
+                    case "faq":
+                        switch (btnState) {
+                            case "What's COVID-19?":
+                                setStep(1);
+                                break;
+        
+                            case "What are the symptoms?":
+                                setStep(2);
+                                break;
+                        
+                            default:
+                                break;
+                        }
+                        break;
                 
                     default:
                         break;
@@ -189,61 +255,170 @@ function Form(props) {
                 break;
 
             case 5:
-                setFormData(undefined);
-                setStep(0);
+                setFormData({
+                    age: {
+                        values: [parseInt(e.target.elements['age'].value)]
+                    }
+                });
+                if(e.target.elements['age'].value >= 2){
+                    setStep(9);
+                }else{
+                    setStep(6);
+                }
                 break;
 
             case 6:
-                if(btnState == 'No'){
-                    setStep(7);
-                }else{
-                    tempFormData = formData;
-                    tempFormData.q5 = {
-                        values: [btnState]
-                    }
-                    setFormData(tempFormData);
+                if(btnState == 'Not experiencing any life-threatening symptoms'){
                     setStep(8);
+                }else{
+                    
+                    setStep(7);
                 }
                 break;
 
             case 7:
-                setFormData(undefined);
-                setStep(0);
                 break;
 
             case 8:
-                tempFormData = formData;
-                tempFormData.q6 = {
-                    values: [btnState]
-                }
-                setFormData(tempFormData);
-                if(btnState == 'Someone else'){
-                    tempFormData.q7 = {
-                        values: [null]
-                    }
-                    setStep(9);
-                }else{
-                    setStep(10);
-                }
                 break;
 
             case 9:
                 tempFormData = formData;
-                Array.from(e.target.elements).forEach(element => {
-                    if(element.checked){
-                        if(element.id == 'other'){
-                            tempFormData.q7 = {
-                                values: [e.target.elements['other-input'].value]
-                            }
-                        }else{
-                            tempFormData.q7 = {
-                                values: [element.value]
-                            }
-                        }
-                    }
-                });
+                tempFormData.gender = {
+                    values: [btnState]
+                }
                 setFormData(tempFormData);
                 setStep(10);
+                break;
+
+            case 10:
+                if(btnState == 'Not experiencing any life-threatening symptoms'){
+                    if(formData.age.values[0] > 1 && formData.age.values[0] < 5){
+                        setStep(11);
+                    }else{
+                        setStep(12);
+                    }
+                }else{
+                    setStep(7);
+                }
+                break;
+
+            case 11:
+                if(btnState == 'None of the above'){
+                    setStep(14);
+                }else{
+                    setStep(13);
+                }
+                break;
+
+            case 12:
+                if(btnState == 'None of the above'){
+                    setStep(14);
+                }else{
+                    setStep(13);
+                }
+                break;
+
+            case 13:
+                break;
+
+            case 14:
+                if(btnState == 'Yes'){
+                    setStep(15);
+                }else{
+                    setStep(23); 
+                }
+                break;
+
+            case 15:
+                let tempSynthoms = [];
+                Array.from(e.target.elements).forEach(element => {
+                    if(element.checked){
+                        tempSynthoms.push(element.id);
+                    }
+                });
+                if(tempSynthoms.length > 1){
+                    setStep(16);
+                }else{
+                    (tempSynthoms[0] == 'other') ? setStep(20) : setStep(16);
+                }
+                break;
+
+            case 16:
+                if(btnState == 'Yes'){
+                    setStep(17);
+                }else{
+                    if(formData.age.values[0] >= 19){
+                        setStep(18);
+                    }else{
+                        setStep(20);
+                    }
+                }
+                break;
+
+            case 17:
+                break;
+
+            case 18:
+                if(btnState == 'Yes'){
+                    setStep(19);
+                }else{
+                    setStep(20);
+                }
+                break;
+
+            case 19:
+                break;
+
+            case 20:
+                tempSynthoms = [];
+                Array.from(e.target.elements).forEach(element => {
+                    if(element.checked){
+                        tempSynthoms.push(element.id);
+                    }
+                });
+                if(tempSynthoms.length > 1){
+                    setStep(21);
+                }else{
+                    (tempSynthoms[0] == 'other') ? setStep(22) : setStep(21);
+                }
+                break; 
+
+            case 21:
+                break;
+
+            case 22:
+                break;
+
+            case 23:
+                setStep(24);
+                break;
+
+            case 24:
+                if(btnState == 'Yes'){
+                    setStep(17);
+                }else{
+                    if(formData.age.values[0] >= 19){
+                        setStep(25);
+                    }else{
+                        setStep(27);
+                    }
+                }
+                break;
+
+            case 25:
+                if(btnState == 'Yes'){
+                    setStep(26);
+                }else{
+                    setStep(27);
+                }
+                break;
+
+            case 26:
+                break;
+
+            case 27:
+                setStep(28);
                 break;
         
             default:
