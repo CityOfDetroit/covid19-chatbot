@@ -137,7 +137,6 @@ function Form(props) {
     }
 
     const handleSubmit = (e) => {
-        console.log(e.target);
         e.preventDefault();
         let tempFormData;
         let tempSynthoms = [];
@@ -171,15 +170,11 @@ function Form(props) {
                                 break;
         
                             case "Water":
-                                setStep(2);
+                                setStep(5);
                                 break;
         
                             case "Jobs":
-                                setStep(3);
-                                break;
-
-                            case "Business":
-                                setStep(4);
+                                setStep(6);
                                 break;
                         
                             default:
@@ -196,6 +191,38 @@ function Form(props) {
                             case "What are the symptoms?":
                                 setStep(2);
                                 break;
+
+                            case "How can I protect myself? Is there a vaccine?":
+                                setStep(3);
+                                break;
+
+                            case "Is there a treatment?":
+                                setStep(4);
+                                break;
+
+                            case "What to do it you've traveled to an affected area?":
+                                setStep(5);
+                                break;
+
+                            case "Can you recover from coronavirus?":
+                                setStep(6);
+                                break;
+
+                            case "How does coronavirus spread?":
+                                setStep(7);
+                                break;
+
+                            case "Who is high risk?":
+                                setStep(8);
+                                break;
+
+                            case "What should I do if I suspect I have COVID-19?":
+                                setStep(9);
+                                break;
+
+                            case "Where can I go to get tested for COVID-19?":
+                                setStep(10);
+                                break;
                         
                             default:
                                 break;
@@ -208,10 +235,39 @@ function Form(props) {
                 break;
 
             case 1:
-                if(btnState == 'Detroit'){
-                    setStep(3);
-                }else{
-                    setStep(2);
+                switch (buildType) {
+                    case "application":
+                        if(btnState == 'Detroit'){
+                            setStep(3);
+                        }else{
+                            setStep(2);
+                        }
+                        break;
+
+                    case "resources":
+                        switch (btnState) {
+                            case "Meals for Children":
+                                setStep(2);
+                                break;
+        
+                            case "Meals for Seniors":
+                                setStep(3);
+                                break;
+        
+                            case "Groceries for Families":
+                                setStep(4);
+                                break;
+                        
+                            default:
+                                break;
+                        }
+                        break;
+
+                    case "faq":
+                        break;
+
+                    default:
+                        break;
                 }
                 break;
 
@@ -544,9 +600,9 @@ function Form(props) {
 
             case 40:
                 if(btnState == 'Yes'){
-                    setStep(37);
-                }else{
                     setStep(41);
+                }else{
+                    setStep(21);
                 }
                 break;
         

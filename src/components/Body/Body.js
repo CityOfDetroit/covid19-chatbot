@@ -14,11 +14,24 @@ function Body(props) {
             case 'a':
                 return <item.tag key={item.id} href={item.link} target='_blank'>{item.content}</item.tag>
                 break;
+
+            case 'ul':
+                return <item.tag key={item.id}>{buildList(item.content)}</item.tag>
+                break;
         
             default:
                 return <item.tag key={item.id}>{item.content}</item.tag>
                 break;
         }
+    }
+
+    const buildList = (items) => {
+        const markup = items.map((item) =>
+            <li key={item.id}>
+                {buildItem(item)}
+            </li>
+        );
+        return markup
     }
 
     const buildBody = () => {
