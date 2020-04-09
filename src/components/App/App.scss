@@ -34,6 +34,7 @@
     display: flex;
     bottom: .5em;
     right: .5em;
+    z-index: 5;
 
     .Panel{
         height: 35em;
@@ -46,6 +47,7 @@
         .chat{
             margin-bottom: .5em;
             flex: 1;
+            overflow: hidden;
 
             .header{
                 background-color: $color-1;
