@@ -1,0 +1,11 @@
+@import '../colors.scss';
+.active-m{
+    background-color: $color-4;
+    color: $white;
+    padding: .5em;
+    margin-top: .5em;
+}
+
+.hide-m{
+    display: none;
+}

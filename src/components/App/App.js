@@ -1,22 +1,29 @@
 import React, { useState }from 'react';
 import './App.scss';
+import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 import Card from '../Card/Card';
 import Form from '../Form/Form';
-import data from '../../data/App.steps.json';
+import data from '../../data/web.steps.json';
 
 function App() {
-    const [step, setStep] = useState();
-    const [formData, setFormData] = useState();
-    const [buildType, setBuildType] = useState('application');
+    const [appID, setAppID]             = useState();
+    const [stepHistory, setStepHistory] = useState([]);
+    const [step, setStep]               = useState();
+    const [formData, setFormData]       = useState();
+    const [buildType, setBuildType]     = useState('application');
+    const [btnState, setbtnState]       = useState();
+    const [hint, setHint]               = useState();
 
     const buildContent = () => {
         if(step != undefined){
             const markup = 
-            <section id="App">
-                <article className="Panel">
-                {buildChat()}
-                </article>
-            </section>
+            <ErrorBoundary>
+                <section id="App">
+                    <article className="Panel">
+                        {buildChat()}
+                    </article>
+                </section>
+            </ErrorBoundary>
             return markup;
         }else{
             return <section id="chatbot" onClick={startChatbot}><button><i className="fas fa-comment-dots"></i></button></section>
@@ -28,19 +35,33 @@ function App() {
         setStep(0);
     }
 
-    const closeChat = (e) => {
+    const restartApp = (e) => {
         e.preventDefault();
-        setFormData(undefined);
-        setBuildType('application');
-        setStep(undefined);
+        if(btnState == 'Save & Exit') {
+            setAppID(undefined);
+            setStepHistory([]);
+            setFormData(undefined);
+            setBuildType('application');
+            setStep(0);
+        }else{
+            if(stepHistory[stepHistory.length - 1] == 0){
+                setAppID(undefined);
+            }
+            let tempStep = stepHistory[stepHistory.length - 1];
+            let tempHistory = stepHistory;
+            tempHistory.pop();
+            setStepHistory(tempHistory);
+            setStep(tempStep);
+        }
     }
 
     const buildHeader = (items) => {
         const markup = items.header.map((header) =>
             <div key={header.id} className="header">
                 <p><img src={header.logoURL} alt={header.logoAlt}></img> <span>{header.text}</span></p>
-                <form onSubmit={closeChat}>
-                    <button>x</button>
+                <form onSubmit={restartApp}>
+                    {(step > 0) ? <button className="back" onClick={(e)=>{setbtnState(e.target.innerText)}}><span>&laquo;</span> Back</button> : ""}
+                    <button className="restart" onClick={(e)=>{setbtnState(e.target.innerText)}}>x</button>
                 </form>
             </div>
         );
@@ -75,14 +96,16 @@ function App() {
 
     const buildForms = (items) => {
         const markup = items.forms.map((form) =>
-            <Form  
+            <Form
+                id={form.id}
+                savedData={form.savedData}
                 key={form.id} 
                 type={form.type}
                 position={form.position}  
                 requirements={form.requirements}
                 text={form.text}
                 sections={form.sections}
-                state={{ formData: [formData, setFormData], step: [step, setStep], buildType: [buildType, setBuildType] }}>
+                state={{ formData: [formData, setFormData], step: [step, setStep], stepHistory: [stepHistory, setStepHistory], buildType: [buildType, setBuildType], appID: [appID, setAppID] }}>
             </Form>
         );
         return markup;
@@ -94,4 +117,3 @@ function App() {
 }
 
 export default App;
-
