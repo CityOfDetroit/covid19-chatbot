@@ -73,19 +73,40 @@
                 form{
                     margin-left: 1em;
 
-                    button{
-                        top: -.05em;
-                        position: relative;
-                        font-size: 3em;
-                        color: $white;
+                    button.back{
                         font-weight: bold;
-                        background-color: $color-1;
                         border: none;
                         cursor: pointer;
+                        background: $color-2;
+                        color: $color-1;
+                        padding: .3em 1em .45em;
+                        position: relative;
+                        top: .2em;
+
+                        span{
+                            font-size: 1.5em;
+                        }
                     }
 
-                    button:hover{
-                        color: $color-2;
+                    button.back:hover{
+                        color: $black;
+                        background-color: $color-3;
+                    }
+
+                    button.restart{
+                        font-weight: bold;
+                        border: none;
+                        cursor: pointer;
+                        padding: .75em;
+                        color: $white;
+                        background-color: $color-4;
+                        position: relative;
+                        top: .105em;
+                        margin-left: .15em;                
+                    }
+
+                    button.restart:hover{
+                        color: $black;
                     }
                 }
             }

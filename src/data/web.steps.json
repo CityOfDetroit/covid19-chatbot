@@ -31,7 +31,7 @@
                                 {
                                     "id"        : "card-0-body-1",
                                     "tag"       : "p",
-                                    "content"   : "During our chat, you can close the chat window if you need to start again." 
+                                    "content"   : "During our chat, you can go back and change your previous selection or you can close the chat window if you need to start again." 
                                 },
                                 {
                                     "id"        : "card-0-body-2",
@@ -50,7 +50,7 @@
                 "forms": [
                     {
                         "id"            : "step-0-form-0",
-                        "savedData"     : true,
+                        "savedData"     : false,
                         "type"          : "single-button",
                         "position"      : "center",
                         "requirements"  : {

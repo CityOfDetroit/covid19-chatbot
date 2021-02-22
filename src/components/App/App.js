@@ -37,12 +37,12 @@ function App() {
 
     const restartApp = (e) => {
         e.preventDefault();
-        if(btnState == 'Save & Exit') {
+        if(btnState == 'x') {
             setAppID(undefined);
             setStepHistory([]);
             setFormData(undefined);
             setBuildType('application');
-            setStep(0);
+            setStep(undefined);
         }else{
             if(stepHistory[stepHistory.length - 1] == 0){
                 setAppID(undefined);
