@@ -30,11 +30,11 @@ function Body(props) {
         }else{
             switch (item.tag) {
                 case 'a':
-                    return <item.tag key={item.id} href={item.link} target='_blank' rel='noopener'>{item.content}</item.tag>
+                    return <item.tag key={item.id} href={item.link} target='_blank' rel='noopener'>{item.content[props.language]}</item.tag>
                     break;
     
                 case 'ul':
-                    return <item.tag key={item.id}>{buildList(item.content)}</item.tag>
+                    return <item.tag key={item.id}>{buildList(item.content[props.language])}</item.tag>
                     break;
     
                 case 'br':
@@ -42,7 +42,7 @@ function Body(props) {
                     break;
             
                 default:
-                    return <item.tag key={item.id}>{item.content}</item.tag>
+                    return <item.tag key={item.id}>{item.content[props.language]}</item.tag>
                     break;
             }
         }

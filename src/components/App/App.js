@@ -5,6 +5,8 @@ import Card from '../Card/Card';
 import Form from '../Form/Form';
 import data from '../../data/web.steps.json';
 
+const lng = 'es';
+
 function App() {
     const [appID, setAppID]             = useState();
     const [stepHistory, setStepHistory] = useState([]);
@@ -13,6 +15,15 @@ function App() {
     const [buildType, setBuildType]     = useState('application');
     const [btnState, setbtnState]       = useState();
     const [hint, setHint]               = useState();
+    const [language, setLanguage]       = useState(lng);
+    const textLng = {
+        backButton: {
+            en: "Back",
+            es: "Atras",
+            bn: "Bengali",
+            ar: "Arabic"
+        }
+    }
 
     const buildContent = () => {
         if(step != undefined){
@@ -58,9 +69,9 @@ function App() {
     const buildHeader = (items) => {
         const markup = items.header.map((header) =>
             <div key={header.id} className="header">
-                <p><img src={header.logoURL} alt={header.logoAlt}></img> <span>{header.text}</span></p>
+                <p><img src={header.logoURL} alt={header.logoAlt}></img> <span>{header.text[language]}</span></p>
                 <form onSubmit={restartApp}>
-                    {(step > 0) ? <button className="back" onClick={(e)=>{setbtnState(e.target.innerText)}}><span>&laquo;</span> Back</button> : ""}
+                    {(step > 0) ? <button className="back" onClick={(e)=>{setbtnState(e.target.innerText)}}><span>&laquo;</span> {textLng.backButton[language]}</button> : ""}
                     <button className="restart" onClick={(e)=>{setbtnState(e.target.innerText)}}>x</button>
                 </form>
             </div>
@@ -85,7 +96,8 @@ function App() {
             <Card  
                 key={card.id} 
                 type={card.type} 
-                title={card.title.value} 
+                language={language}
+                title={card.title.value[language]} 
                 titleType={card.title.type} 
                 body={card.body.markup} 
                 bodyType={card.body.type}>
@@ -101,6 +113,7 @@ function App() {
                 savedData={form.savedData}
                 key={form.id} 
                 type={form.type}
+                language={language}
                 position={form.position}  
                 requirements={form.requirements}
                 text={form.text}

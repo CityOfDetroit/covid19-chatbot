@@ -312,26 +312,27 @@ function Form(props) {
                 switch (item.type) {
                     case 'submit':
                         if(checkPreviousAnswer(item, index, item.tag, item.type)){
-                            markup = <button className="selected" role="button" aria-label={item.name} onClick={(e)=>{setbtnState(e.target.innerText)}} type={item.type}>{item.text}</button>;
+                            markup = <button className="selected" role="button" aria-label={item.name} onClick={(e)=>{setbtnState(e.target.getAttribute('data-value'))}} type={item.type} data-value={item.value}>{item.text[props.language]}</button>;
                         }else{
-                            markup = <button role="button" aria-label={item.name} onClick={(e)=>{setbtnState(e.target.innerText)}} type={item.type}>{item.text}</button>;
+                            markup = <button role="button" aria-label={item.name} onClick={(e)=>{setbtnState(e.target.getAttribute('data-value'))}} type={item.type} data-value={item.value}>{item.text[props.language]}</button>;
                         }
                         break;
     
                     case 'button':
                         switch (item.text) {
                             case 'Add':
-                                markup = <button role="button" aria-label={item.name} onClick={(e)=>{setExtras({component: e.target, count:(extras.count + 1)})}} type={item.type} data-special-type={item.specialAttribute} data-special-text={item.otherPlaceholder} data-special-label={item.otherLabel} data-special-id={item.otherID} data-ismulti-component={item.isMultiComponent} data-multicomponents={JSON.stringify(item.multiComponents)}>{item.text}</button>;
+                                markup = <button role="button" aria-label={item.name} onClick={(e)=>{setExtras({component: e.target, count:(extras.count + 1)})}} type={item.type} data-special-type={item.specialAttribute} data-special-text={item.otherPlaceholder} data-special-label={item.otherLabel} data-special-id={item.otherID} data-ismulti-component={item.isMultiComponent} data-multicomponents={JSON.stringify(item.multiComponents)}>{item.text[props.language]}</button>;
                                 break;
 
                             case 'Remove':
                                 markup = <button 
-                            role="button" 
-                            aria-label={item.name} 
-                            onClick={(e)=>{
-                                if(extras.count > 0){setExtras({component: e.target, count:(extras.count - 1)})} 
-                            }} 
-                            type={item.type} data-special-type={item.specialAttribute} data-special-text={item.otherPlaceholder} data-special-label={item.otherLabel} data-special-id={item.otherID} data-ismulti-component={item.isMultiComponent} data-multicomponents={JSON.stringify(item.multiComponents)}>{item.text}</button>;
+                                            role="button" 
+                                            aria-label={item.name} 
+                                            onClick={(e)=>{
+                                                if(extras.count > 0){setExtras({component: e.target, count:(extras.count - 1)})} 
+                                            }} 
+                                            type={item.type} data-special-type={item.specialAttribute} data-special-text={item.otherPlaceholder} data-special-label={item.otherLabel} data-special-id={item.otherID} data-ismulti-component={item.isMultiComponent} data-multicomponents={JSON.stringify(item.multiComponents)}>{item.text[props.language]}
+                                        </button>;
                                 break;
                         
                             default:

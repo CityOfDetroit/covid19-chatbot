@@ -11,15 +11,15 @@ function Card(props) {
             cardType += ` ${props.type}`;
             return (
                 <article className={cardType}>
-                    <Title type={props.titleType} name={props.title}></Title>
-                    <Body type={props.bodyType} content={props.body}></Body>
+                    <Title type={props.titleType} name={props.title} language={props.language}></Title>
+                    <Body type={props.bodyType} content={props.body} language={props.language}></Body>
                 </article>
             )
         }else{
             return (
                 <article className="card default">
-                    <Title name={props.title}></Title>
-                    <Body type={props.bodyType} content={props.body}></Body>
+                    <Title name={props.title} language={props.language}></Title>
+                    <Body type={props.bodyType} content={props.body} language={props.language}></Body>
                 </article>
             )
         }
