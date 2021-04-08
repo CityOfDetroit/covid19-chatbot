@@ -112,7 +112,7 @@
                                     "validationType"        : "equal",
                                     "next"                  : 2,
                                     "isSwitchingFormType"   : true,
-                                    "formType"              : "status",
+                                    "formType"              : "application",
                                     "postingType"           : null,
                                     "multiLogic"            : false,
                                     "multiLogicOpts"        : [],
@@ -231,7 +231,12 @@
                 "header": [
                     {
                         "id": "web-chat",
-                        "text": "City Interactive Center",
+                        "text": {
+                            "en": "City Interactive Center",
+                            "es": "Centro Interactivo de la Ciudad",
+                            "bn": "Bengali",
+                            "ar": "Arabic"
+                        },
                         "logo": true,
                         "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
                         "logoAlt": "City of Detroit",
@@ -244,7 +249,12 @@
                         "type"      : "right pop-up color-2",
                         "title"     : {
                             "type"  : "small",
-                            "value" : null
+                            "value" : {
+                                "en": null,
+                                "es": null,
+                                "bn": null,
+                                "ar": null
+                            }
                         },
                         "body"   : {
                             "type"      : "text",
@@ -254,7 +264,7 @@
                                     "tag"       : "p",
                                     "content"   : {
                                         "en": "It seems you have some questions about COVID-19",
-                                        "es": "Spanish",
+                                        "es": "Parece que tienes algunas preguntas sobre COVID-19",
                                         "bn": "Bengali",
                                         "ar": "Arabic"
                                     }
@@ -262,7 +272,12 @@
                                 {
                                     "id"        : "card-0-body-1",
                                     "tag"       : "p",
-                                    "content"   : "What type of information are you looking for?" 
+                                    "content"   : {
+                                        "en": "What type of information are you looking for?" ,
+                                        "es": "Que informacion estas buscando?",
+                                        "bn": "Bengali",
+                                        "ar": "Arabic"
+                                    }
                                 }
                             ]
                         }
@@ -288,9 +303,9 @@
                             "isFinalStep"               : false,
                             "logic": [
                                 {
-                                    "validation"            : "Vaccine",
+                                    "validation"            : "COVID-19 Vaccine",
                                     "validationType"        : "equal",
-                                    "next"                  : 1,
+                                    "next"                  : 3,
                                     "isSwitchingFormType"   : false,
                                     "formType"              : "application",
                                     "postingType"           : null,
@@ -299,33 +314,11 @@
                                     "specialTask"           : null
                                 },
                                 {
-                                    "validation"            : "What's COVID-19",
+                                    "validation"            : "What's COVID-19?",
                                     "validationType"        : "equal",
                                     "next"                  : 2,
                                     "isSwitchingFormType"   : true,
-                                    "formType"              : "status",
-                                    "postingType"           : null,
-                                    "multiLogic"            : false,
-                                    "multiLogicOpts"        : [],
-                                    "specialTask"           : null
-                                },
-                                {
-                                    "validation"            : "Business Information",
-                                    "validationType"        : "equal",
-                                    "next"                  : 3,
-                                    "isSwitchingFormType"   : true,
-                                    "formType"              : "load",
-                                    "postingType"           : null,
-                                    "multiLogic"            : false,
-                                    "multiLogicOpts"        : [],
-                                    "specialTask"           : null
-                                },
-                                {
-                                    "validation"            : "City Services",
-                                    "validationType"        : "equal",
-                                    "next"                  : 4,
-                                    "isSwitchingFormType"   : true,
-                                    "formType"              : "load",
+                                    "formType"              : "application",
                                     "postingType"           : null,
                                     "multiLogic"            : false,
                                     "multiLogicOpts"        : [],
@@ -339,58 +332,300 @@
                         },
                         "sections"      : [
                             {
-                                "id"    : "step-0-form-0-section-0",
+                                "id"    : "step-2-form-0-section-0",
                                 "items" : [
                                     {   
-                                        "id"    : "pay",
-                                        "tag"   : "button",
-                                        "type"  : "submit",
-                                        "name"  : "pay",
-                                        "description"   : "Pay something",
-                                        "text"  : "Pay something",
-                                        "label" : false
+                                        "id"            : "vaccine",
+                                        "tag"           : "button",
+                                        "type"          : "submit",
+                                        "name"          : "vaccine",
+                                        "description"   : "COVID-19 Vaccine",
+                                        "value"         : "COVID-19 Vaccine",
+                                        "text"          : {
+                                            "en": "COVID-19 Vaccine" ,
+                                            "es": "Vacuna para el COVID-19",
+                                            "bn": "Bengali",
+                                            "ar": "Arabic"
+                                        },
+                                        "label"         : false
                                     },
                                     {   
-                                        "id"    : "covid-info",
-                                        "tag"   : "button",
-                                        "type"  : "submit",
-                                        "name"  : "covid-info",
-                                        "description"   : "Get COVID-19 Info",
-                                        "text"  : "Get COVID-19 Info",
-                                        "label" : false
-                                    },
-                                    {   
-                                        "id"    : "find-programs",
-                                        "tag"   : "button",
-                                        "type"  : "submit",
-                                        "name"  : "find-programs",
-                                        "description"   : "Find Programs",
-                                        "text"  : "Find Programs",
-                                        "label" : false
-                                    },
-                                    {   
-                                        "id"    : "city-services",
-                                        "tag"   : "button",
-                                        "type"  : "submit",
-                                        "name"  : "city-services",
-                                        "description"   : "City Services",
-                                        "text"  : "City Services",
-                                        "label" : false
-                                    },
-                                    {   
-                                        "id"    : "other-help",
-                                        "tag"   : "button",
-                                        "type"  : "submit",
-                                        "name"  : "city-services",
-                                        "description"   : "Something else",
-                                        "text"  : "Something else",
-                                        "label" : false
+                                        "id"            : "COVID-19",
+                                        "tag"           : "button",
+                                        "type"          : "submit",
+                                        "name"          : "COVID-19",
+                                        "description"   : "What's COVID-19?",
+                                        "value"         : "What's COVID-19?",
+                                        "text"          : {
+                                            "en": "What's COVID-19?" ,
+                                            "es": "¿Qué es COVID-19?",
+                                            "bn": "Bengali",
+                                            "ar": "Arabic"
+                                        },
+                                        "label"         : false
                                     }
                                 ]
                             }
                         ]
                     }
                 ]
+            }
+        },
+        {
+            "items" : {
+                "header": [
+                    {
+                        "id": "web-chat",
+                        "text": {
+                            "en": "City Interactive Center",
+                            "es": "Centro Interactivo de la Ciudad",
+                            "bn": "Bengali",
+                            "ar": "Arabic"
+                        },
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
+                "cards": [
+                    {   
+                        "id"        : "step-3-card-0",
+                        "type"      : "right pop-up color-2",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : {
+                                "en": null,
+                                "es": null,
+                                "bn": null,
+                                "ar": null
+                            }
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : {
+                                        "en": "What would you like to know about COVID-19 vaccines?",
+                                        "es": "¿Qué le gustaría saber sobre las vacunas COVID-19?",
+                                        "bn": "Bengali",
+                                        "ar": "Arabic"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": [
+                    {
+                        "id"            : "step-3-form-0",
+                        "savedData"     : false,
+                        "type"          : "single-button",
+                        "position"      : "center",
+                        "requirements"  : {
+                            "inputType"                 : "button",
+                            "formTypeGlobal"            : null,
+                            "isSwitchingFormTypeGlobal" : null,
+                            "needsNewID"                : false,
+                            "historyOverrite"           : null,
+                            "nextGlobal"                : false,
+                            "isPosting"                 : false,
+                            "isGetting"                 : false,
+                            "isPostingFullForm"         : false,
+                            "postingTypeGlobal"         : null,
+                            "isFinalStep"               : false,
+                            "logic": [
+                                {
+                                    "validation"            : "Where can I get vaccinated?",
+                                    "validationType"        : "equal",
+                                    "next"                  : 4,
+                                    "isSwitchingFormType"   : false,
+                                    "formType"              : "application",
+                                    "postingType"           : null,
+                                    "multiLogic"            : false,
+                                    "multiLogicOpts"        : [],
+                                    "specialTask"           : null
+                                },
+                                {
+                                    "validation"            : "Information about the vaccines",
+                                    "validationType"        : "equal",
+                                    "next"                  : 5,
+                                    "isSwitchingFormType"   : false,
+                                    "formType"              : "application",
+                                    "postingType"           : null,
+                                    "multiLogic"            : false,
+                                    "multiLogicOpts"        : [],
+                                    "specialTask"           : null
+                                }
+                            ]
+                        },
+                        "text"          : {
+                            "type"      : null,
+                            "markup"    : []
+                        },
+                        "sections"      : [
+                            {
+                                "id"    : "step-2-form-0-section-0",
+                                "items" : [
+                                    {   
+                                        "id"            : "where",
+                                        "tag"           : "button",
+                                        "type"          : "submit",
+                                        "name"          : "where",
+                                        "description"   : "Where can I get vaccinated?",
+                                        "value"         : "Where can I get vaccinated?",
+                                        "text"          : {
+                                            "en": "Where can I get vaccinated?" ,
+                                            "es": "¿Dónde puedo vacunarme?",
+                                            "bn": "Bengali",
+                                            "ar": "Arabic"
+                                        },
+                                        "label"         : false
+                                    },
+                                    {   
+                                        "id"            : "information",
+                                        "tag"           : "button",
+                                        "type"          : "submit",
+                                        "name"          : "information",
+                                        "description"   : "Information about the vaccines",
+                                        "value"         : "Information about the vaccines",
+                                        "text"          : {
+                                            "en": "Information about the vaccines" ,
+                                            "es": "Información sobre las vacunas",
+                                            "bn": "Bengali",
+                                            "ar": "Arabic"
+                                        },
+                                        "label"         : false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "items" : {
+                "header": [
+                    {
+                        "id": "web-chat",
+                        "text": {
+                            "en": "City Interactive Center",
+                            "es": "Centro Interactivo de la Ciudad",
+                            "bn": "Bengali",
+                            "ar": "Arabic"
+                        },
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
+                "cards": [
+                    {   
+                        "id"        : "step-4-card-0",
+                        "type"      : "right pop-up color-2",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : {
+                                "en": null,
+                                "es": null,
+                                "bn": null,
+                                "ar": null
+                            }
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : {
+                                        "en": "To learn about the available vaccination locations. Please view our vaccination page.",
+                                        "es": "Para conocer los lugares de vacunación disponibles. Consulte nuestra página de vacunación.",
+                                        "bn": "Bengali",
+                                        "ar": "Arabic"
+                                    }
+                                },
+                                {
+                                    "id"        : "card-0-body-1",
+                                    "tag"       : "a",
+                                    "link"      : "https://detroitmi.gov/departments/detroit-health-department/programs-and-services/communicable-disease/coronavirus-covid-19/covid-19-vaccine-latest-updates",
+                                    "content"   : {
+                                        "en": "Visit the City of Detroit's Vaccine page." ,
+                                        "es": "Visite la página de vacunas de la ciudad de Detroit.",
+                                        "bn": "Bengali",
+                                        "ar": "Arabic"
+                                    } 
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": []
+            }
+        },
+        {
+            "items" : {
+                "header": [
+                    {
+                        "id": "web-chat",
+                        "text": {
+                            "en": "City Interactive Center",
+                            "es": "Centro Interactivo de la Ciudad",
+                            "bn": "Bengali",
+                            "ar": "Arabic"
+                        },
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
+                "cards": [
+                    {   
+                        "id"        : "step-5-card-0",
+                        "type"      : "right pop-up color-2",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : {
+                                "en": null,
+                                "es": null,
+                                "bn": null,
+                                "ar": null
+                            }
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : {
+                                        "en": "To learn about the current vaccination available. Please view the CDC's vaccine FAQ page.",
+                                        "es": "Para conocer la vacunación actual disponible. Consulte la página de preguntas frecuentes sobre vacunas de los CDC.",
+                                        "bn": "Bengali",
+                                        "ar": "Arabic"
+                                    }
+                                },
+                                {
+                                    "id"        : "card-0-body-1",
+                                    "tag"       : "a",
+                                    "link"      : "https://www.cdc.gov/coronavirus/2019-ncov/vaccines/facts.html",
+                                    "content"   : {
+                                        "en": "Visit the CDC's vaccine FAQ page." ,
+                                        "es": "Visite la página de preguntas frecuentes sobre vacunas de los CDC.",
+                                        "bn": "Bengali",
+                                        "ar": "Arabic"
+                                    } 
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": []
             }
         }
     ]

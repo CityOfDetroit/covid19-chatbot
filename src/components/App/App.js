@@ -5,7 +5,7 @@ import Card from '../Card/Card';
 import Form from '../Form/Form';
 import data from '../../data/web.steps.json';
 
-const lng = 'es';
+const lng = drupalSettings.detroitmi.docsJS.language;
 
 function App() {
     const [appID, setAppID]             = useState();
@@ -37,7 +37,7 @@ function App() {
             </ErrorBoundary>
             return markup;
         }else{
-            return <section id="chatbot" onClick={startChatbot}><button><i className="fas fa-comment-dots"></i></button></section>
+            return <section id="chatbot" onClick={startChatbot}><button><i className="fas fa-comment-dots"></i><small>Chat</small></button></section>
         }
     }
 
