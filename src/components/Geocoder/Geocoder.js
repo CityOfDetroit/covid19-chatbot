@@ -1,11 +1,14 @@
 import React, { useState }from 'react';
 import './Geocoder.scss';
+const turf = require('@turf/turf');
+const arcGIS = require('terraformer-arcgis-parser');
 
 function Geocoder(props) {
   // Declare a new state variable, which we'll call when changing panel render
-  const [sugg, setSugg]       = useState();
-  const [address, setAddress] = useState();
-  const [parcel, setParcel]   = useState(props.parcel);
+  const [sugg, setSugg]             = useState();
+  const [address, setAddress]       = useState();
+  const [geoResults, setGeoResults] = useState();
+  const [parcel, setParcel]         = useState(props.parcel);
 
   const getAddressSuggestions = (addr) => {
     let tempAddr = addr.split(",");
@@ -45,7 +48,17 @@ function Geocoder(props) {
       if(sugg != undefined){
         sugg.forEach((item) => {
           if(ev.target.value == item.address){
+            console.log('setting parcelID');
+            console.log(props.specialFunction);
             setParcel(item.attributes.User_fld);
+            switch (props.specialFunction) {
+              case 'nearest-vaccine':
+                getNearestVaccine(item);
+                break;
+            
+              default:
+                break;
+            }
           }
         })
       }
@@ -60,7 +73,7 @@ function Geocoder(props) {
 
   const buildOptions = () => {
     const markup = sugg.map((item, key) =>
-        <option key={key} value={item.address} data-parcel={item.attributes.User_fld}></option>
+        <option key={key} value={item.address} data-parcel={item.attributes.User_fld} data-x={item.location.x} data-y={item.location.y}></option>
     );
     return markup;
   }
@@ -77,6 +90,40 @@ function Geocoder(props) {
     }
   }
 
+  const buildGeoResults = () => {
+    let markup = '';
+    if(geoResults != undefined){
+      console.log(geoResults);
+      markup = geoResults.map((item, key) =>
+        <div key={key}>
+          <p><strong>Location:</strong> {item.attributes.Site_Name}<br></br>
+          <strong>Address:</strong> {item.attributes.Address}<br></br>
+          <a href={item.attributes.How_to_schedule_} target="_blank">Book Appointment</a></p>
+        </div>
+      );
+    }
+    return markup;
+  }
+
+  const getNearestVaccine = (item) => {
+    console.log('getting nearest vaccine');
+    let _point = turf.point([item.location.x, item.location.y]);
+    let _buffer = turf.buffer(_point, 10, {units: 'miles'});
+    let _simplePolygon = turf.simplify(_buffer.geometry, {tolerance: 0.005, highQuality: false});
+    let arcsimplePolygon = arcGIS.convert(_simplePolygon);
+    let url = `https://services2.arcgis.com/qvkbeam7Wirps6zC/ArcGIS/rest/services/Vaccine_Locations_for_Website/FeatureServer/0/query?where=&objectIds=&time=&geometry=${encodeURI(JSON.stringify(arcsimplePolygon))}&geometryType=esriGeometryPolygon&inSR=&spatialRel=esriSpatialRelIntersects&relationParam=&outFields=*&returnGeometry=true&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=4326&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&returnDistinctValues=false&resultOffset=&resultRecordCount=3&f=json`;
+    fetch(url)
+    .then((resp) => resp.json()) // Transform the data into json
+    .then(function(data) {
+      console.log(data);
+      if(data.features.length){
+        setGeoResults(data.features);
+      }
+    }).catch( err => {
+      // console.log(err);
+    });
+  }
+
   return (
       <div>
         <label className={getClassName()} htmlFor={props.id}>{props.label}</label>
@@ -86,6 +133,9 @@ function Geocoder(props) {
         </datalist>
         <div className={(props.alert) ? 'active-m' : 'hide-m'}>
             {(props.alert) ? props.alert : ''}
+        </div>
+        <div className="geo-results">
+          {buildGeoResults()}
         </div>
       </div>
   );

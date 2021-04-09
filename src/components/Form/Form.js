@@ -382,6 +382,7 @@ function Form(props) {
                     <Geocoder 
                     id={item.id} 
                     name={item.name} 
+                    specialFunction={item.function}
                     placeholder={item.placeholder} 
                     required={item.required} 
                     ariaRequired={item.required}

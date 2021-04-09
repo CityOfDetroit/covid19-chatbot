@@ -44,7 +44,7 @@ form.input-submit{
             flex: 1;
 
             input{
-                width: 100%;
+                width: calc(100% - 1em);
                 padding: .31em;
             }
         }

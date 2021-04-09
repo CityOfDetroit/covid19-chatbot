@@ -449,9 +449,20 @@
                                     "specialTask"           : null
                                 },
                                 {
-                                    "validation"            : "Information about the vaccines",
+                                    "validation"            : "Vaccine FAQs",
                                     "validationType"        : "equal",
                                     "next"                  : 5,
+                                    "isSwitchingFormType"   : false,
+                                    "formType"              : "application",
+                                    "postingType"           : null,
+                                    "multiLogic"            : false,
+                                    "multiLogicOpts"        : [],
+                                    "specialTask"           : null
+                                },
+                                {
+                                    "validation"            : "Latest updates about vaccines",
+                                    "validationType"        : "equal",
+                                    "next"                  : 6,
                                     "isSwitchingFormType"   : false,
                                     "formType"              : "application",
                                     "postingType"           : null,
@@ -485,15 +496,30 @@
                                         "label"         : false
                                     },
                                     {   
-                                        "id"            : "information",
+                                        "id"            : "faqs",
                                         "tag"           : "button",
                                         "type"          : "submit",
-                                        "name"          : "information",
-                                        "description"   : "Information about the vaccines",
-                                        "value"         : "Information about the vaccines",
+                                        "name"          : "faqs",
+                                        "description"   : "Vaccine FAQs",
+                                        "value"         : "Vaccine FAQs",
                                         "text"          : {
-                                            "en": "Information about the vaccines" ,
-                                            "es": "Información sobre las vacunas",
+                                            "en": "Vaccine FAQs" ,
+                                            "es": "Preguntas frecuentes sobre vacunas",
+                                            "bn": "Bengali",
+                                            "ar": "Arabic"
+                                        },
+                                        "label"         : false
+                                    },
+                                    {   
+                                        "id"            : "latest",
+                                        "tag"           : "button",
+                                        "type"          : "submit",
+                                        "name"          : "latest",
+                                        "description"   : "Latest updates about vaccines",
+                                        "value"         : "Latest updates about vaccines",
+                                        "text"          : {
+                                            "en": "Latest updates about vaccines" ,
+                                            "es": "Últimas actualizaciones sobre vacunas",
                                             "bn": "Bengali",
                                             "ar": "Arabic"
                                         },
@@ -543,28 +569,63 @@
                                     "id"        : "card-0-body-0",
                                     "tag"       : "p",
                                     "content"   : {
-                                        "en": "To learn about the available vaccination locations. Please view our vaccination page.",
-                                        "es": "Para conocer los lugares de vacunación disponibles. Consulte nuestra página de vacunación.",
+                                        "en": "Find your nearest vaccination location by entering your address.",
+                                        "es": "Encuentre su lugar de vacunación más cercano ingresando su dirección.",
                                         "bn": "Bengali",
                                         "ar": "Arabic"
                                     }
-                                },
-                                {
-                                    "id"        : "card-0-body-1",
-                                    "tag"       : "a",
-                                    "link"      : "https://detroitmi.gov/departments/detroit-health-department/programs-and-services/communicable-disease/coronavirus-covid-19/covid-19-vaccine-latest-updates",
-                                    "content"   : {
-                                        "en": "Visit the City of Detroit's Vaccine page." ,
-                                        "es": "Visite la página de vacunas de la ciudad de Detroit.",
-                                        "bn": "Bengali",
-                                        "ar": "Arabic"
-                                    } 
                                 }
                             ]
                         }
                     }
                 ],
-                "forms": []
+                "forms": [
+                    {
+                        "id"            : "step-4-form-0",
+                        "savedData"     : false,
+                        "type"          : "input-submit",
+                        "position"      : "center",
+                        "requirements"  : {
+                            "inputType"                 : "input-text",
+                            "formTypeGlobal"            : null,
+                            "isSwitchingFormTypeGlobal" : null,
+                            "needsNewID"                : false,
+                            "historyOverrite"           : null,
+                            "nextGlobal"                : false,
+                            "isPosting"                 : false,
+                            "isGetting"                 : false,
+                            "isPostingFullForm"         : false,
+                            "postingTypeGlobal"         : null,
+                            "isFinalStep"               : false,
+                            "logic": []
+                        },
+                        "text"          : {
+                            "type"      : null,
+                            "markup"    : []
+                        },
+                        "sections"      : [
+                            {
+                                "id"    : "step-4-form-0-section-0",
+                                "items" : [
+                                    {   
+                                        "id"            : "nearest-vaccine",
+                                        "tag"           : "GEOCODER",
+                                        "function"      : "nearest-vaccine",
+                                        "type"          : "text",
+                                        "name"          : "nearest-vaccine",
+                                        "description"   : "Enter your address.",
+                                        "placeholder"   : "Ex. 1301 Third st.",
+                                        "percel"        : null,
+                                        "text"          : "Yes",
+                                        "label"         : false,
+                                        "labelText"     : "Address",
+                                        "required"      : true
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
             }
         },
         {
@@ -617,6 +678,67 @@
                                     "content"   : {
                                         "en": "Visit the CDC's vaccine FAQ page." ,
                                         "es": "Visite la página de preguntas frecuentes sobre vacunas de los CDC.",
+                                        "bn": "Bengali",
+                                        "ar": "Arabic"
+                                    } 
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "forms": []
+            }
+        },
+        {
+            "items" : {
+                "header": [
+                    {
+                        "id": "web-chat",
+                        "text": {
+                            "en": "City Interactive Center",
+                            "es": "Centro Interactivo de la Ciudad",
+                            "bn": "Bengali",
+                            "ar": "Arabic"
+                        },
+                        "logo": true,
+                        "logoURL": "https://detroitmi.gov/themes/custom/detroitmi/logo-white.png",
+                        "logoAlt": "City of Detroit",
+                        "form": true
+                    }
+                ],
+                "cards": [
+                    {   
+                        "id"        : "step-6-card-0",
+                        "type"      : "right pop-up color-2",
+                        "title"     : {
+                            "type"  : "small",
+                            "value" : {
+                                "en": null,
+                                "es": null,
+                                "bn": null,
+                                "ar": null
+                            }
+                        },
+                        "body"   : {
+                            "type"      : "text",
+                            "markup"    : [
+                                {
+                                    "id"        : "card-0-body-0",
+                                    "tag"       : "p",
+                                    "content"   : {
+                                        "en": "To learn about the latest updates regarding vaccinations. Please visit our vaccination page.",
+                                        "es": "Para conocer las últimas actualizaciones sobre vacunas. Visite nuestra página de vacunación.",
+                                        "bn": "Bengali",
+                                        "ar": "Arabic"
+                                    }
+                                },
+                                {
+                                    "id"        : "card-0-body-1",
+                                    "tag"       : "a",
+                                    "link"      : "https://detroitmi.gov/departments/detroit-health-department/programs-and-services/communicable-disease/coronavirus-covid-19/covid-19-vaccine-latest-updates",
+                                    "content"   : {
+                                        "en": "Visit the City's Vaccination page." ,
+                                        "es": "Visite la página de vacunación de la ciudad.",
                                         "bn": "Bengali",
                                         "ar": "Arabic"
                                     } 
