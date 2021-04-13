@@ -618,7 +618,12 @@
                                         "percel"        : null,
                                         "text"          : "Yes",
                                         "label"         : false,
-                                        "labelText"     : "Address",
+                                        "labelText"     : {
+                                            "en": "Address",
+                                            "es": "Dirección",
+                                            "bn": "Bengali",
+                                            "ar": "Arabic"
+                                        },
                                         "required"      : true
                                     }
                                 ]

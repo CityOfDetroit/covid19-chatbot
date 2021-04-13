@@ -9,6 +9,12 @@ function Geocoder(props) {
   const [address, setAddress]       = useState();
   const [geoResults, setGeoResults] = useState();
   const [parcel, setParcel]         = useState(props.parcel);
+  const words = {
+    en: ['Location:','Address:','Availability:','Schedule:','Book Appointment'],
+    es: ['Ubicación:','Dirección:','Disponibilidad:','Reservar una cita:','Reservar una cita'],
+    bn: ['Location:','Address:','Availability:','Schedule:','Book Appointment'],
+    ar: ['Location:','Address:','Availability:','Schedule:','Book Appointment'],
+  }
 
   const getAddressSuggestions = (addr) => {
     let tempAddr = addr.split(",");
@@ -92,11 +98,11 @@ function Geocoder(props) {
     let markup = '';
     if(geoResults != undefined){
       markup = geoResults.map((item, key) =>
-        <div className="mb-1" key={key}>
-          <p><strong>Location:</strong> {item.attributes.USER_Site_Name}<br></br>
-          <strong>Address:</strong> {item.attributes.USER_Address}<br></br>
-          <strong>Availability:</strong> {item.attributes.USER_Availability}<br></br>
-          <strong>Schedule:</strong> {(item.attributes.Schedule.includes('313')) ? item.attributes.Schedule : <a href={item.attributes.Schedule} target="_blank">Book Appointment</a>}<br></br></p>
+        <div className="mb-n3" key={key}>
+          <p><strong>{words[props.language][0]}</strong> {item.attributes.USER_Site_Name}<br></br>
+          <strong>{words[props.language][1]}</strong> {item.attributes.USER_Address}<br></br>
+          <strong>{words[props.language][2]}</strong> {item.attributes.USER_Availability}<br></br>
+          <strong>{words[props.language][3]}</strong> {(item.attributes.Schedule.includes('313')) ? item.attributes.Schedule : <a href={item.attributes.Schedule} target="_blank">{words[props.language][4]}</a>}<br></br></p>
         </div>
       );
     }
@@ -118,7 +124,7 @@ function Geocoder(props) {
 
   return (
       <div>
-        <label className={getClassName()} htmlFor={props.id}>{props.label}</label>
+        <label className={getClassName()} htmlFor={props.id}>{props.label[props.language]}</label>
         <input list={buildNames()} id={props.id} aria-label={props.label} name={props.name} value={props.value} defaultValue={props.savedValue} placeholder={props.placeholder} data-parcel={parcel} onChange={handleChange} onBlur={handleBlur} aria-required={props.required} required={props.required} autoComplete="off"></input>
         <datalist id={buildNames()}>
             {(sugg) ? buildOptions() : ''}

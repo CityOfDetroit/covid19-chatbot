@@ -383,6 +383,7 @@ function Form(props) {
                     id={item.id} 
                     name={item.name} 
                     specialFunction={item.function}
+                    language={props.language}
                     placeholder={item.placeholder} 
                     required={item.required} 
                     ariaRequired={item.required}
