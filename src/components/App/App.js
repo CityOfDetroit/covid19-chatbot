@@ -5,7 +5,7 @@ import Card from '../Card/Card';
 import Form from '../Form/Form';
 import data from '../../data/web.steps.json';
 
-const lng = 'en';
+const lng = drupalSettings.detroitmi.docsJS.language;
 
 function App() {
     const [appID, setAppID]             = useState();

@@ -38,7 +38,7 @@ function Geocoder(props) {
             error(error);
         });
     }catch (error) {
-        console.log(error);
+        // console.log(error);
     }
   }
 
@@ -48,8 +48,6 @@ function Geocoder(props) {
       if(sugg != undefined){
         sugg.forEach((item) => {
           if(ev.target.value == item.address){
-            console.log('setting parcelID');
-            console.log(props.specialFunction);
             setParcel(item.attributes.User_fld);
             switch (props.specialFunction) {
               case 'nearest-vaccine':
@@ -93,12 +91,12 @@ function Geocoder(props) {
   const buildGeoResults = () => {
     let markup = '';
     if(geoResults != undefined){
-      console.log(geoResults);
       markup = geoResults.map((item, key) =>
-        <div key={key}>
-          <p><strong>Location:</strong> {item.attributes.Site_Name}<br></br>
-          <strong>Address:</strong> {item.attributes.Address}<br></br>
-          <a href={item.attributes.How_to_schedule_} target="_blank">Book Appointment</a></p>
+        <div className="mb-1" key={key}>
+          <p><strong>Location:</strong> {item.attributes.USER_Site_Name}<br></br>
+          <strong>Address:</strong> {item.attributes.USER_Address}<br></br>
+          <strong>Availability:</strong> {item.attributes.USER_Availability}<br></br>
+          <strong>Schedule:</strong> {(item.attributes.Schedule.includes('313')) ? item.attributes.Schedule : <a href={item.attributes.Schedule} target="_blank">Book Appointment</a>}<br></br></p>
         </div>
       );
     }
@@ -106,16 +104,10 @@ function Geocoder(props) {
   }
 
   const getNearestVaccine = (item) => {
-    console.log('getting nearest vaccine');
-    let _point = turf.point([item.location.x, item.location.y]);
-    let _buffer = turf.buffer(_point, 10, {units: 'miles'});
-    let _simplePolygon = turf.simplify(_buffer.geometry, {tolerance: 0.005, highQuality: false});
-    let arcsimplePolygon = arcGIS.convert(_simplePolygon);
-    let url = `https://services2.arcgis.com/qvkbeam7Wirps6zC/ArcGIS/rest/services/Vaccine_Locations_for_Website/FeatureServer/0/query?where=&objectIds=&time=&geometry=${encodeURI(JSON.stringify(arcsimplePolygon))}&geometryType=esriGeometryPolygon&inSR=&spatialRel=esriSpatialRelIntersects&relationParam=&outFields=*&returnGeometry=true&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=4326&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&returnDistinctValues=false&resultOffset=&resultRecordCount=3&f=json`;
+    let url = `https://services2.arcgis.com/qvkbeam7Wirps6zC/ArcGIS/rest/services/Vaccine_Locations_for_Website/FeatureServer/0/query?where=&objectIds=&time=&geometry=${item.location.x}%2C${item.location.y}&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&resultType=standard&distance=2&units=esriSRUnit_StatuteMile&returnGeodetic=false&outFields=*&returnGeometry=true&featureEncoding=esriDefault&multipatchOption=xyFootprint&maxAllowableOffset=&geometryPrecision=&outSR=4326&datumTransformation=&applyVCSProjection=false&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnQueryGeometry=false&returnDistinctValues=false&cacheHint=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&having=&resultOffset=&resultRecordCount=5&returnZ=false&returnM=false&returnExceededLimitFeatures=true&quantizationParameters=&sqlFormat=none&f=json&token=`;
     fetch(url)
     .then((resp) => resp.json()) // Transform the data into json
     .then(function(data) {
-      console.log(data);
       if(data.features.length){
         setGeoResults(data.features);
       }

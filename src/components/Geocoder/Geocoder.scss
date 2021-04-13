@@ -9,3 +9,7 @@
 .hide-m{
     display: none;
 }
+
+input::placeholder { 
+    color: $color-1;
+}
