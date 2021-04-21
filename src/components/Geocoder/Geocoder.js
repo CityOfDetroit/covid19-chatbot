@@ -102,7 +102,7 @@ function Geocoder(props) {
           <p><strong>{words[props.language][0]}</strong> {item.attributes.USER_Site_Name}<br></br>
           <strong>{words[props.language][1]}</strong> {item.attributes.USER_Address}<br></br>
           <strong>{words[props.language][2]}</strong> {item.attributes.USER_Availability}<br></br>
-          <strong>{words[props.language][3]}</strong> {(item.attributes.Schedule.includes('313')) ? item.attributes.Schedule : <a href={item.attributes.Schedule} target="_blank">{words[props.language][4]}</a>}<br></br></p>
+          <strong>{words[props.language][3]}</strong> {(item.attributes.Schedule == null) ? 'NA' : (item.attributes.Schedule.includes('313')) ? item.attributes.Schedule : <a href={item.attributes.Schedule} target="_blank">{words[props.language][4]}</a>}<br></br></p>
         </div>
       );
     }
@@ -110,7 +110,7 @@ function Geocoder(props) {
   }
 
   const getNearestVaccine = (item) => {
-    let url = `https://services2.arcgis.com/qvkbeam7Wirps6zC/ArcGIS/rest/services/Vaccine_Locations_for_Website/FeatureServer/0/query?where=&objectIds=&time=&geometry=${item.location.x}%2C${item.location.y}&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&resultType=standard&distance=2&units=esriSRUnit_StatuteMile&returnGeodetic=false&outFields=*&returnGeometry=true&featureEncoding=esriDefault&multipatchOption=xyFootprint&maxAllowableOffset=&geometryPrecision=&outSR=4326&datumTransformation=&applyVCSProjection=false&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnQueryGeometry=false&returnDistinctValues=false&cacheHint=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&having=&resultOffset=&resultRecordCount=5&returnZ=false&returnM=false&returnExceededLimitFeatures=true&quantizationParameters=&sqlFormat=none&f=json&token=`;
+    let url = `https://services2.arcgis.com/qvkbeam7Wirps6zC/ArcGIS/rest/services/Vaccine_Locations_for_Website/FeatureServer/0/query?where=&objectIds=&time=&geometry=${item.location.x}%2C${item.location.y}&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&resultType=standard&distance=2&units=esriSRUnit_StatuteMile&returnGeodetic=false&outFields=*&returnGeometry=true&featureEncoding=esriDefault&multipatchOption=xyFootprint&maxAllowableOffset=&geometryPrecision=&outSR=4326&datumTransformation=&applyVCSProjection=false&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnQueryGeometry=false&returnDistinctValues=false&cacheHint=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&having=&resultOffset=&resultRecordCount=3&returnZ=false&returnM=false&returnExceededLimitFeatures=true&quantizationParameters=&sqlFormat=none&f=json&token=`;
     fetch(url)
     .then((resp) => resp.json()) // Transform the data into json
     .then(function(data) {
